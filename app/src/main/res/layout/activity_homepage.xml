@@ -7,16 +7,26 @@
     android:background="@color/white">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="168dp"
-        android:layout_marginEnd="160dp"
-        android:layout_marginBottom="573dp"
-        android:text="ECO-NICE" />
+        android:layout_marginStart="152dp"
+        android:layout_marginEnd="91dp"
+        android:layout_marginBottom="593dp"
+        android:text="Welcome to ECO-NICE" />
+
+    <Button
+        android:id="@+id/abtBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="142dp"
+        android:layout_marginBottom="294dp"
+        android:text="ABOUT" />
 
     <Button
         android:id="@+id/startBtn"
@@ -24,8 +34,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="157dp"
-        android:layout_marginBottom="485dp"
+        android:layout_marginEnd="146dp"
+        android:layout_marginBottom="441dp"
         android:text="START" />
 
     <Button
@@ -34,19 +44,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="130dp"
-        android:layout_marginBottom="419dp"
+        android:layout_marginEnd="123dp"
+        android:layout_marginBottom="367dp"
         android:text="HOW TO PLAY" />
-
-    <Button
-        android:id="@+id/abtBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="154dp"
-        android:layout_marginBottom="349dp"
-        android:text="ABOUT" />
 
     <Button
         android:id="@+id/quitBtn"
@@ -54,8 +54,19 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="153dp"
-        android:layout_marginBottom="283dp"
+        android:layout_marginEnd="145dp"
+        android:layout_marginBottom="210dp"
         android:text="QUIT" />
+
+    <TextView
+        android:id="@+id/nameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="184dp"
+        android:layout_marginBottom="533dp"
+        android:textSize="22sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SplashScreen">
         <activity
+            android:name=".Nameinput_page"
+            android:exported="false" />
+        <activity
             android:name=".Quit"
             android:exported="false" />
         <activity
