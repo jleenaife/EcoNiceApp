@@ -24,14 +24,14 @@ public class Homepage extends AppCompatActivity {
         Intent i = getIntent();
         name = i.getStringExtra(NAME);
 
-        nameText.setText(name+"!");
+        nameText.setText(name);
 
         button = (Button) findViewById(R.id.startBtn);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openStart();
-            }
+                sendData();
+            };
         });
 
         button = (Button) findViewById(R.id.htpBtn);
@@ -59,10 +59,6 @@ public class Homepage extends AppCompatActivity {
         });
     }
 
-    public void openStart() {
-        Intent intent = new Intent(this, Startpage.class);
-        startActivity(intent);
-    }
 
     public void openHTP() {
         Intent intent = new Intent(this, HowToPlay.class);
@@ -70,11 +66,19 @@ public class Homepage extends AppCompatActivity {
     }
 
     public void openAbout() {
-        Intent intent = new Intent(this, HowToPlay.class);
+        Intent intent = new Intent(this, About.class);
         startActivity(intent);
     }
     public void ExitGame() {
         Intent intent = new Intent(this, Quit.class);
         startActivity(intent);
+    }
+
+    public  void  sendData() {
+        name = nameText.getText().toString().trim();
+
+        Intent i = new Intent(this, Startpage.class);
+        i.putExtra(Startpage.NAME,name);
+        startActivity(i);
     }
 }
