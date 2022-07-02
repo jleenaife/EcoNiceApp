@@ -10,5 +10,10 @@
     <color name="colorPrimary">#DF1919</color>
     <color name="colorPrimaryDark">#9B1515</color>
     <color name="colorAccent">#FFFFFF</color>
+    <color name="ecoblue">#6184D8</color>
+    <color name="ecogrape">#533A71</color>
+    <color name="ecotorc">#50C5B7</color>
+    <color name="ecogreen">#9CEC5B</color>
+    <color name="ecoyellow">#F0F465</color>
 
 </resources>
