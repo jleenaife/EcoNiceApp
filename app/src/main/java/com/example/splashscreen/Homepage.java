@@ -19,7 +19,7 @@ public class Homepage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
 
-        nameText = findViewById(R.id.nameText);
+        nameText = findViewById(R.id.greetTxt);
 
         Intent i = getIntent();
         name = i.getStringExtra(NAME);

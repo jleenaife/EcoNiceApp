@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.splashscreen">
+    package="com.example.splashscreen" >
 
     <application
         android:allowBackup="true"
@@ -8,12 +8,15 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.SplashScreen">
+        android:theme="@style/Theme.SplashScreen" >
+        <activity
+            android:name=".pg2above13"
+            android:exported="false" />
         <activity
             android:name=".pg2below12"
             android:exported="false" />
         <activity
-            android:name=".above13"
+            android:name=".above13home"
             android:exported="false" />
         <activity
             android:name=".below12home"
@@ -41,7 +44,7 @@
             android:exported="false" />
         <activity
             android:name=".SplashScreen"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

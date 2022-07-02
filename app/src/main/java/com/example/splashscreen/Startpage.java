@@ -24,7 +24,7 @@ public class Startpage extends AppCompatActivity {
         Intent i = getIntent();
         name = i.getStringExtra(NAME);
 
-        nameText.setText("Before we start, "+name);
+        nameText.setText("Before we start, "+name+"!");
 
         button = (Button) findViewById(R.id.b12_Btn);
         button.setOnClickListener(new View.OnClickListener() {
@@ -34,7 +34,7 @@ public class Startpage extends AppCompatActivity {
             };
         });
 
-        button = (Button) findViewById(R.id.a13_Btn);
+        button = (Button) findViewById(R.id.b13_Btn);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -49,7 +49,7 @@ public class Startpage extends AppCompatActivity {
     }
 
     public void open13() {
-        Intent intent = new Intent(this, above13.class);
+        Intent intent = new Intent(this, above13home.class);
         startActivity(intent);
     }
 }

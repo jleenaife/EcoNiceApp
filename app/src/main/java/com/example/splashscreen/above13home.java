@@ -7,13 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class below12home extends AppCompatActivity {
+public class above13home extends AppCompatActivity {
     private Button start;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_below12home);
+        setContentView(R.layout.activity_above13);
 
         start = findViewById(R.id.b13startBtn);
 
@@ -21,7 +21,7 @@ public class below12home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(below12home.this, pg2below12.class);
+                Intent intent = new Intent(above13home.this, pg2above13.class);
                 startActivity(intent);
             }
         });
