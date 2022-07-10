@@ -24,6 +24,7 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
     private List<Question> questionList;
     private int quesNum;
     private CountDownTimer countDown;
+    private int score;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +42,8 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         option2.setOnClickListener(this);
 
         getQuestionList();
+
+        score = 0;
     }
     private void getQuestionList()
     {
@@ -121,6 +124,7 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         {
             //Right Answer
             ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.GREEN));
+            score++;
         }
         else
         {
@@ -167,6 +171,7 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         {
             // Go to Score Activity
             Intent intent = new Intent(QuestionActivity.this,ScoreActivity.class);
+            intent.putExtra("SCORE", String.valueOf(score) + "/" + String.valueOf(questionList.size()));
             startActivity(intent);
             QuestionActivity.this.finish();
         }
