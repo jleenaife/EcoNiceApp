@@ -2,9 +2,15 @@ package com.example.splashscreen;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.animation.Animator;
+import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.os.Handler;
 import android.view.View;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -16,7 +22,8 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
     private TextView question, qCount, timer;
     private Button option1, option2;
     private List<Question> questionList;
-    int quesNum;
+    private int quesNum;
+    private CountDownTimer countDown;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,10 +77,10 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
 
     private void startTimer()
     {
-        CountDownTimer countDown = new CountDownTimer(1000, 1000) {
+        countDown = new CountDownTimer(1000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
-
+                if(millisUntilFinished <10)
                 timer.setText(String.valueOf(millisUntilFinished/1000));
             }
 
@@ -103,34 +110,112 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
                 break;
             default:
         }
-
-        checkAnswer(selectedOption);
+        countDown.cancel();
+        checkAnswer(selectedOption, v);
     }
 
-    private void checkAnswer(int selectedOption)
+    private void checkAnswer(int selectedOption, View view)
     {
 
         if(selectedOption == questionList.get(quesNum).getCorrectAns())
         {
             //Right Answer
+            ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.GREEN));
         }
         else
         {
             //Wrong Answer
-        }
+            ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.RED));
 
-        changeQuestion();
+            switch (questionList.get(quesNum).getCorrectAns())
+            {
+                case 1:
+                    option1.setBackgroundTintList(ColorStateList.valueOf(Color.GREEN));
+                    break;
+                case 2:
+                    option2.setBackgroundTintList(ColorStateList.valueOf(Color.GREEN));
+                    break;
+            }
+        }
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                changeQuestion();
+            }
+        }, 2000);
+
+
     }
 
     private void changeQuestion()
     {
         if( quesNum < questionList.size() -1)
         {
+            quesNum++;
 
+            playAnim(question, 0, 0);
+            playAnim(option1, 0, 1);
+            playAnim(option2, 0, 2);
+
+            qCount.setText(String.valueOf(quesNum+1) + "/" + String.valueOf(questionList.size()));
+
+            timer.setText((String.valueOf(10)));
+            startTimer();
         }
         else
         {
-
+            // Go to Score Activity
+            Intent intent = new Intent(QuestionActivity.this,ScoreActivity.class);
+            startActivity(intent);
+            QuestionActivity.this.finish();
         }
+    }
+
+    private void playAnim(View view, final int value, int viewNum)
+    {
+        view.animate().alpha(value).scaleX(value).scaleY(value).setDuration(500)
+                .setStartDelay(100).setInterpolator(new DecelerateInterpolator())
+                .setListener(new Animator.AnimatorListener() {
+                    @Override
+                    public void onAnimationStart(Animator animator) {
+
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animator animator) {
+                            if (value == 0)
+                            {
+                                switch (viewNum)
+                                {
+                                    case 0:
+                                        ((TextView)view).setText(questionList.get(quesNum).getQuestion());
+                                        break;
+                                    case 1:
+                                        ((Button)view).setText(questionList.get(quesNum).getOptionA());
+                                        break;
+                                    case 2:
+                                        ((Button)view).setText(questionList.get(quesNum).getOptionB());
+                                        break;
+                                }
+
+
+                                if(viewNum != 0)
+                                    ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#FFC54D")));
+
+                                playAnim(view, 1,viewNum);
+                            }
+                    }
+
+                    @Override
+                    public void onAnimationCancel(Animator animator) {
+
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animator animator) {
+
+                    }
+                });
     }
 }
