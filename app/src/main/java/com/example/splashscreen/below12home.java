@@ -21,7 +21,7 @@ public class below12home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(below12home.this, pg2below12.class);
+                Intent intent = new Intent(below12home.this, QuestionActivity.class);
                 startActivity(intent);
             }
         });
