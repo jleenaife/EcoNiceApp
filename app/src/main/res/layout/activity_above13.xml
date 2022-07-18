@@ -11,14 +11,24 @@
         android:id="@+id/imageView3"
         android:layout_width="294dp"
         android:layout_height="310dp"
-        app:srcCompat="@drawable/eq_logo"
-        tools:layout_editor_absoluteX="105dp"
-        tools:layout_editor_absoluteY="327dp" />
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/b13startBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quizTitle"
+        app:srcCompat="@drawable/eq_logo" />
 
     <TextView
         android:id="@+id/quizTitle"
-        android:layout_width="355dp"
-        android:layout_height="176dp"
+        android:layout_width="337dp"
+        android:layout_height="165dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="100dp"
         android:height="20dp"
         android:fontFamily="@font/pixelgamefont"
         android:gravity="center"
@@ -28,29 +38,30 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/b13startBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.364">
+        app:layout_constraintVertical_bias="0.0">
 
     </TextView>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/b13startBtn"
-        android:layout_width="447dp"
-        android:layout_height="87dp"
+        android:layout_width="0sp"
+        android:layout_height="50sp"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="216dp"
+        android:layout_marginBottom="200dp"
         android:background="@drawable/round_corner"
         android:backgroundTint="@color/ecotorc"
         android:fontFamily="@font/pixelgamefont"
         android:text="START"
-        android:textSize="30sp"
         android:textColor="@color/ecogrape"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
