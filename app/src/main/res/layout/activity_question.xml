@@ -65,7 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
             android:background="@drawable/round_corner"
-            android:backgroundTint="@color/quizyellow"
+            android:backgroundTint="@color/quizmustard"
             android:elevation="3dp"
             android:padding="16dp"
             android:text="Option 1"
@@ -80,7 +80,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
             android:background="@drawable/round_corner"
-            android:backgroundTint="@color/quizyellow"
+            android:backgroundTint="@color/quizmustard"
             android:elevation="3dp"
             android:padding="16dp"
             android:text="Option 2"
@@ -103,7 +103,7 @@
         android:textStyle="bold"
         android:gravity="center"
         android:background="@drawable/round_corner"
-        android:backgroundTint="@color/quizyellow"
+        android:backgroundTint="@color/quizmustard"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
