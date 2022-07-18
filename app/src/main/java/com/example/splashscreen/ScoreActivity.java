@@ -27,8 +27,8 @@ public class ScoreActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(ScoreActivity.this,MainActivity.class);
-                ScoreActivity.this.startActivity(intent);
+              //  Intent intent = new Intent(ScoreActivity.this,MainActivity.class);
+              //  ScoreActivity.this.startActivity(intent);
                 ScoreActivity.this.finish();
 
             }
