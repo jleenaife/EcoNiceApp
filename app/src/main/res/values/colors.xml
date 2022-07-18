@@ -12,8 +12,12 @@
     <color name="colorAccent">#FFFFFF</color>
     <color name="ecoblue">#6184D8</color>
     <color name="ecogrape">#533A71</color>
-    <color name="ecotorc">#50C5B7</color>
+    <color name="ecotorc">#00E4CD</color>
     <color name="ecogreen">#9CEC5B</color>
     <color name="ecoyellow">#F0F465</color>
-
+    <color name="quizpurple">#BD4291</color>
+    <color name="quizmustard">#FFC54D</color>
+    <color name="quizpurgrey">#9A86A4</color>
+    <color name="quizblue">#B1BCE6</color>
+    <color name="quizyellow">#F1F0C0</color>
 </resources>

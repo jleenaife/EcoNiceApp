@@ -15,13 +15,13 @@ public class below12home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_below12home);
 
-        start = findViewById(R.id.b13startBtn);
+        start = findViewById(R.id.b12startBtn);
 
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(below12home.this, pg2below12.class);
+                Intent intent = new Intent(below12home.this, QuestionActivity.class);
                 startActivity(intent);
             }
         });
