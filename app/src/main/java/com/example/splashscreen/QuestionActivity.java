@@ -33,7 +33,7 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
 
         question = findViewById(R.id.question);
         qCount = findViewById(R.id.quest_num);
-        timer =findViewById(R.id.countdown);
+        timer = findViewById(R.id.countdown);
 
         option1 = findViewById(R.id.option1);
         option2 = findViewById(R.id.option2);
@@ -80,7 +80,7 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
 
     private void startTimer()
     {
-        countDown = new CountDownTimer(1000, 1000) {
+        countDown = new CountDownTimer(10000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
                 if(millisUntilFinished <10)
@@ -144,7 +144,8 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
-            public void run() {
+            public void run()
+            {
                 changeQuestion();
             }
         }, 2000);
@@ -164,7 +165,7 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
 
             qCount.setText(String.valueOf(quesNum+1) + "/" + String.valueOf(questionList.size()));
 
-            timer.setText((String.valueOf(10)));
+            timer.setText(String.valueOf(10));
             startTimer();
         }
         else
