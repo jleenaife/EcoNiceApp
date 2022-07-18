@@ -4,16 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ScoreActivity">
+    tools:context=".ScoreActivity"
+    android:background="@color/quizblue">
 
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="100dp"
-        android:layout_marginEnd="32dp"
-        android:background="@color/colorPrimary"
+        android:layout_marginEnd="24dp"
+        android:background="@color/quizyellow"
         android:orientation="vertical"
         android:paddingBottom="32dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,8 +26,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
+            android:fontFamily="@font/pixelgamefont"
             android:gravity="center"
             android:text="SCORE"
+            android:textColor="@android:color/black"
             android:textSize="32sp"
             android:textStyle="bold" />
 
@@ -40,9 +43,10 @@
             android:id="@+id/sa_score"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:fontFamily="@font/pixelgamefont"
             android:gravity="center"
             android:text="5 / 10"
-            android:layout_margin="20dp"
             android:textColor="@android:color/black"
             android:textSize="32sp"
             android:textStyle="bold" />
@@ -56,9 +60,10 @@
         android:layout_marginEnd="64dp"
         android:layout_marginBottom="64dp"
         android:background="@drawable/round_corner"
-        android:backgroundTint="@color/colorPrimary"
+        android:backgroundTint="@color/quizyellow"
         android:text="Done"
-        android:textColor="@color/colorAccent"
+        android:fontFamily="@font/pixelgamefont"
+        android:textColor="@color/black"
         android:textStyle="bold"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -7,37 +7,46 @@
     android:background="@color/ecoblue"
     tools:context=".below12home">
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="294dp"
+        android:layout_height="310dp"
+        app:srcCompat="@drawable/eq_logo"
+        tools:layout_editor_absoluteX="105dp"
+        tools:layout_editor_absoluteY="327dp" />
+
     <TextView
         android:id="@+id/quizTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="87dp"
+        android:layout_width="355dp"
+        android:layout_height="176dp"
         android:height="20dp"
         android:fontFamily="@font/pixelgamefont"
         android:gravity="center"
         android:text="ECO QUIZ"
         android:textColor="@color/ecogreen"
-        android:textSize="40sp"
+        android:textSize="60sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/b13startBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.452">
+        app:layout_constraintVertical_bias="0.364">
 
     </TextView>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/b13startBtn"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="447dp"
+        android:layout_height="87dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="188dp"
+        android:layout_marginBottom="216dp"
         android:background="@drawable/round_corner"
         android:backgroundTint="@color/ecotorc"
-        android:text="START"
         android:fontFamily="@font/pixelgamefont"
+        android:text="START"
+        android:textSize="30sp"
         android:textColor="@color/ecogrape"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
