@@ -19,9 +19,6 @@
             android:name=".pg2above13"
             android:exported="false" />
         <activity
-            android:name=".pg2below12"
-            android:exported="false" />
-        <activity
             android:name=".above13home"
             android:exported="false" />
         <activity
