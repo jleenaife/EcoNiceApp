@@ -21,8 +21,8 @@ public class above13home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(above13home.this, pg2above13.class);
-                startActivity(intent);
+                //Intent intent = new Intent(above13home.this, pg2above13.class);
+               // startActivity(intent);
             }
         });
     }

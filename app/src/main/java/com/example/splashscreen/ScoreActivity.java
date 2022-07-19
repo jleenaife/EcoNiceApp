@@ -26,12 +26,13 @@ public class ScoreActivity extends AppCompatActivity {
         done.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-              //  Intent intent = new Intent(ScoreActivity.this,MainActivity.class);
-              //  ScoreActivity.this.startActivity(intent);
-                ScoreActivity.this.finish();
-
+                openSecondGame();
             }
         });
+    }
+
+    public void openSecondGame(){
+        Intent intent = new Intent(this, CatchThatJunkHome.class);
+        startActivity(intent);
     }
 }

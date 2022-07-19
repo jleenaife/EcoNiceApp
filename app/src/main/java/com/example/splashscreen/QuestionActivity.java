@@ -168,7 +168,7 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
             {
                 changeQuestion();
             }
-        }, 2000);
+        }, 1500);
 
 
     }

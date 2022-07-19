@@ -10,13 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SplashScreen">
         <activity
+            android:name=".CatchThatJunkHome"
+            android:exported="false" />
+        <activity
             android:name=".ScoreActivity"
             android:exported="false" />
         <activity
             android:name=".QuestionActivity"
-            android:exported="false" />
-        <activity
-            android:name=".pg2above13"
             android:exported="false" />
         <activity
             android:name=".above13home"
