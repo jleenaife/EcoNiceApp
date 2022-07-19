@@ -42,7 +42,7 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
 
         question = findViewById(R.id.question);
         qCount = findViewById(R.id.quest_num);
-        timer = findViewById(R.id.timer);
+        timer = findViewById(R.id.countdown);
 
         option1 = findViewById(R.id.option1);
         option2 = findViewById(R.id.option2);
