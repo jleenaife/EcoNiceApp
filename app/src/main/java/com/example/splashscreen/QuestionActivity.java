@@ -1,5 +1,6 @@
 package com.example.splashscreen;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.animation.Animator;
@@ -13,6 +14,13 @@ import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,6 +33,7 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
     private int quesNum;
     private CountDownTimer countDown;
     private int score;
+    private FirebaseFirestore firestore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,13 +42,15 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
 
         question = findViewById(R.id.question);
         qCount = findViewById(R.id.quest_num);
-        timer = findViewById(R.id.countdown);
+        timer = findViewById(R.id.timer);
 
         option1 = findViewById(R.id.option1);
         option2 = findViewById(R.id.option2);
 
         option1.setOnClickListener(this);
         option2.setOnClickListener(this);
+
+        firestore = FirebaseFirestore.getInstance();
 
         getQuestionList();
 
@@ -49,18 +60,27 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
     {
         questionList = new ArrayList<>();
 
-        questionList.add(new Question("Question 1", "Biodegradable", "Non-Biodegradable", 1));
-        questionList.add(new Question("Question 2", "Biodegradable", "Non-Biodegradable", 2));
-        questionList.add(new Question("Question 3", "Biodegradable", "Non-Biodegradable", 1));
-        questionList.add(new Question("Question 4", "Biodegradable", "Non-Biodegradable", 1));
-        questionList.add(new Question("Question 5", "Biodegradable", "Non-Biodegradable", 2));
-        questionList.add(new Question("Question 6", "Biodegradable", "Non-Biodegradable", 1));
-        questionList.add(new Question("Question 7", "Biodegradable", "Non-Biodegradable", 2));
-        questionList.add(new Question("Question 8", "Biodegradable", "Non-Biodegradable", 2));
-        questionList.add(new Question("Question 9", "Biodegradable", "Non-Biodegradable", 1));
-        questionList.add(new Question("Question 10", "Biodegradable", "Non-Biodegradable", 2));
+        firestore.collection("QUIZ").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
 
-        setQuestion();
+                if (task.isSuccessful()){
+                    QuerySnapshot questions = task.getResult();
+
+                for(QueryDocumentSnapshot doc : questions){
+                    questionList.add(new Question(doc.getString("QUESTION"),
+                            doc.getString("A"),
+                            doc.getString("B"),
+                            Integer.valueOf(doc.getString("ANSWER"))
+                    ));
+                }
+                    setQuestion();
+
+                } else {
+                    Toast.makeText(QuestionActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 
     public void setQuestion()
