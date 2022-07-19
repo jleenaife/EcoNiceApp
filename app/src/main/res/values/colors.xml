@@ -20,4 +20,9 @@
     <color name="quizpurgrey">#9A86A4</color>
     <color name="quizblue">#B1BCE6</color>
     <color name="quizyellow">#F1F0C0</color>
+    <color name="htpred">#D82148</color>
+    <color name="htpbeige">#DADBBD</color>
+    <color name="htpgreen">#6EBF8B</color>
+    <color name="htpdarkblue">#151D3B</color>
+
 </resources>
