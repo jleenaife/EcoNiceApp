@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "518495185672",
+    "project_id": "eco-nice",
+    "storage_bucket": "eco-nice.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:518495185672:android:c37c94de63a5a02e0f9abd",
+        "android_client_info": {
+          "package_name": "com.example.splashscreen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "518495185672-hlgg6to123d5fgbe9b4j308utb1jjl1m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCI4hce0YyIdLbQNhEUPZT_gvljkxU5xlg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "518495185672-hlgg6to123d5fgbe9b4j308utb1jjl1m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
