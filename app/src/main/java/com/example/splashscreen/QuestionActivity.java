@@ -10,6 +10,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
+import android.util.ArrayMap;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
@@ -17,6 +18,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
@@ -24,6 +27,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class QuestionActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -31,6 +35,7 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
     private Button option1, option2;
     private List<Question> questionList;
     private int quesNum;
+    public int counter;
     private CountDownTimer countDown;
     private int score;
     private FirebaseFirestore firestore;
@@ -42,7 +47,7 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
 
         question = findViewById(R.id.question);
         qCount = findViewById(R.id.quest_num);
-        timer = findViewById(R.id.countdown);
+        timer = (TextView) findViewById(R.id.countdown);
 
         option1 = findViewById(R.id.option1);
         option2 = findViewById(R.id.option2);
@@ -50,6 +55,7 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         option1.setOnClickListener(this);
         option2.setOnClickListener(this);
 
+        questionList = new ArrayList<>();
         firestore = FirebaseFirestore.getInstance();
 
         getQuestionList();
@@ -58,34 +64,50 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
     }
     private void getQuestionList()
     {
-        questionList = new ArrayList<>();
+        questionList.clear();
 
-        firestore.collection("QUIZ").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+        firestore.collection("1").get()
+                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                    @Override
+                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
 
-                if (task.isSuccessful()){
-                    QuerySnapshot questions = task.getResult();
+                        Map<String, QueryDocumentSnapshot> docList = new ArrayMap<>();
 
-                for(QueryDocumentSnapshot doc : questions){
-                    questionList.add(new Question(doc.getString("QUESTION"),
-                            doc.getString("A"),
-                            doc.getString("B"),
-                            Integer.valueOf(doc.getString("ANSWER"))
-                    ));
-                }
-                    setQuestion();
+                        for (QueryDocumentSnapshot doc : queryDocumentSnapshots) {
+                            docList.put(doc.getId(), doc);
+                        }
 
-                } else {
-                    Toast.makeText(QuestionActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
+                        QueryDocumentSnapshot quesListDoc = docList.get("QUESTIONS_LIST");
+
+                        String count = quesListDoc.getString("COUNT");
+
+                        for (int i = 0; i < Integer.valueOf(count); i++) {
+                            String quesID = quesListDoc.getString("Q" + String.valueOf(i + 1) + "_ID");
+
+                            QueryDocumentSnapshot quesDoc = docList.get(quesID);
+
+                            questionList.add(new Question(
+                                    quesDoc.getString("QUESTION"),
+                                    quesDoc.getString("A"),
+                                    quesDoc.getString("B"),
+                                    Integer.valueOf(quesDoc.getString("ANSWER"))
+                            ));
+                        }
+
+                        setQuestion();
+
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(QuestionActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
 
     public void setQuestion()
     {
-        timer.setText(String.valueOf(10));
 
         question.setText(questionList.get(0).getQuestion());
         option1.setText(questionList.get(0).getOptionA());
@@ -103,6 +125,8 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         countDown = new CountDownTimer(10000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
+                timer.setText(String.valueOf(counter));
+                counter++;
                 if(millisUntilFinished <10)
                 timer.setText(String.valueOf(millisUntilFinished/1000));
             }
@@ -185,7 +209,7 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
 
             qCount.setText(String.valueOf(quesNum+1) + "/" + String.valueOf(questionList.size()));
 
-            timer.setText(String.valueOf(10));
+            timer.setText(String.valueOf(0));
             startTimer();
         }
         else
