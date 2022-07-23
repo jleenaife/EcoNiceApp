@@ -24,5 +24,9 @@
     <color name="htpbeige">#DADBBD</color>
     <color name="htpgreen">#6EBF8B</color>
     <color name="htpdarkblue">#151D3B</color>
-
+    <color name="ctjplum">#490B3D</color>
+    <color name="ctjpink">#BE144F</color>
+    <color name="ctjorange">#D58221</color>
+    <color name="ctjyellow">#F6C619</color>
+    <color name="ctjgreen">#899918</color>
 </resources>

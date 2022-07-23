@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CatchThatJunkHome"
+    android:orientation="vertical"
+    android:background="@color/ctjyellow">
+
+    <TextView
+        android:id="@+id/scoreLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Score : 0"
+        android:fontFamily="@font/pixelgamefont"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:padding="10dp"
+        android:textStyle="bold"/>
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/startLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tap_to_start"
+            android:textColor="@color/white"
+            android:fontFamily="@font/pixelgamefont"
+            android:textSize="30sp"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:id="@+id/trashbin"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/trashbin"
+            android:layout_gravity="center_vertical"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/banana"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/banana"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/battery"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/battery"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/can"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/can"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/carrot"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/carrot"
+            tools:ignore="ContentDescription" />
+
+
+        <ImageView
+            android:id="@+id/leaves1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/leaves1"
+            tools:ignore="ContentDescription" />
+
+
+    </FrameLayout>
+</LinearLayout>

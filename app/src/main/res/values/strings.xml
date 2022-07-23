@@ -1,3 +1,17 @@
 <resources>
-    <string name="app_name">Splash Screen</string>
+    <string name="app_name">Catch That Junk</string>
+
+    <string name="point_carrot">10 point</string>
+    <string name="point_banana">20 point</string>
+    <string name="point_leaves1">30 point</string>
+    <string name="point_battery">Game Over</string>
+    <string name="point_can">Game Over</string>
+    <string name="btn_Start">START</string>
+
+    <string name="tap_to_start">Tap to Start</string>
+
+    <string name="result_title">GAME OVER</string>
+    <string name="result_score">300</string>
+    <string name="high_score">High Score : %d</string>
+    <string name="btn_try_again">TRY AGAIN</string>
 </resources>

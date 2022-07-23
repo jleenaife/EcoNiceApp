@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CatchThatJunkResult"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/ctjplum">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/result_title"
+        android:fontFamily="@font/pixelgamefont"
+        android:textStyle="bold"
+        android:textColor="@color/ctjyellow"
+        android:textSize="40sp"/>
+
+    <TextView
+        android:id="@+id/scoreLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/result_score"
+        android:fontFamily="@font/pixelgamefont"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:layout_marginTop="80dp"/>
+
+    <TextView
+        android:id="@+id/highScoreLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/high_score"
+        android:fontFamily="@font/pixelgamefont"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginTop="80dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="276dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/ctjpink"
+        android:fontFamily="@font/pixelgamefont"
+        android:onClick="tryAgain"
+        android:text="@string/btn_try_again"
+        android:textColor="@color/ctjorange"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+</LinearLayout>
