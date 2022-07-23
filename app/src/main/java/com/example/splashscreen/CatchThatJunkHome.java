@@ -20,7 +20,7 @@ public class CatchThatJunkHome extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(CatchThatJunkHome.this, CatchThatJunk.class);
+                Intent intent = new Intent(CatchThatJunkHome.this, CatchThatJunkLevel1.class);
                 startActivity(intent);
             }
         });

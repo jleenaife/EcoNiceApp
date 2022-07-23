@@ -10,10 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SplashScreen">
         <activity
+            android:name=".CatchThatJunkLevel2"
+            android:exported="false" />
+        <activity
             android:name=".CatchThatJunkResult"
             android:exported="false" />
         <activity
-            android:name=".CatchThatJunk"
+            android:name=".CatchThatJunkLevel1"
             android:exported="false" />
         <activity
             android:name=".ScoreActivity2"
