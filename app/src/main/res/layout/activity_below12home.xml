@@ -8,7 +8,7 @@
     tools:context=".below12home">
 
     <TextView
-        android:id="@+id/quizTitle2"
+        android:id="@+id/quizTitle"
         android:layout_width="355dp"
         android:layout_height="176dp"
         android:layout_marginStart="32dp"
@@ -62,7 +62,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/quizTitle2"
+        app:layout_constraintTop_toBottomOf="@+id/quizTitle"
         app:srcCompat="@drawable/eq_logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

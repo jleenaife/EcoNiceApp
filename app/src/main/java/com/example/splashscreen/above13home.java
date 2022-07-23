@@ -20,9 +20,8 @@ public class above13home extends AppCompatActivity {
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                //Intent intent = new Intent(above13home.this, pg2above13.class);
-               // startActivity(intent);
+                Intent intent = new Intent(above13home.this, QuestionActivity2.class);
+                startActivity(intent);
             }
         });
     }

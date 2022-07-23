@@ -9,8 +9,8 @@
         <entry key="..\:/Users/HP/Documents/GitHub/EcoNiceApp/app/src/main/res/layout/activity_above13.xml" value="0.14407866609662248" />
         <entry key="..\:/Users/HP/Documents/GitHub/EcoNiceApp/app/src/main/res/layout/activity_below12home.xml" value="0.14407866609662248" />
         <entry key="..\:/Users/HP/Documents/GitHub/EcoNiceApp/app/src/main/res/layout/activity_homepage.xml" value="0.1634963768115942" />
-        <entry key="..\:/Users/HP/Documents/GitHub/EcoNiceApp/app/src/main/res/layout/activity_how_to_play.xml" value="0.16666666666666666" />
-        <entry key="..\:/Users/HP/Documents/GitHub/EcoNiceApp/app/src/main/res/layout/activity_main.xml" value="0.13405797101449277" />
+        <entry key="..\:/Users/HP/Documents/GitHub/EcoNiceApp/app/src/main/res/layout/activity_how_to_play.xml" value="0.22" />
+        <entry key="..\:/Users/HP/Documents/GitHub/EcoNiceApp/app/src/main/res/layout/activity_main.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/HP/Documents/GitHub/EcoNiceApp/app/src/main/res/layout/activity_nameinput_page.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/HP/Documents/GitHub/EcoNiceApp/app/src/main/res/layout/activity_pg2above13.xml" value="0.13405797101449277" />
         <entry key="..\:/Users/HP/Documents/GitHub/EcoNiceApp/app/src/main/res/layout/activity_question.xml" value="0.16576086956521738" />
@@ -24,7 +24,9 @@
         <entry key="..\:/Users/avade/OneDrive/Documents/GitHub/EcoNiceApp/app/src/main/res/layout/activity_above13.xml" value="0.25" />
         <entry key="..\:/Users/avade/OneDrive/Documents/GitHub/EcoNiceApp/app/src/main/res/layout/activity_below12home.xml" value="0.1756578947368421" />
         <entry key="..\:/Users/avade/OneDrive/Documents/GitHub/EcoNiceApp/app/src/main/res/layout/activity_below12quiz.xml" value="0.25" />
+        <entry key="..\:/Users/avade/OneDrive/Documents/GitHub/EcoNiceApp/app/src/main/res/layout/activity_catch_that_junk.xml" value="0.1756578947368421" />
         <entry key="..\:/Users/avade/OneDrive/Documents/GitHub/EcoNiceApp/app/src/main/res/layout/activity_catch_that_junk_home.xml" value="0.1756578947368421" />
+        <entry key="..\:/Users/avade/OneDrive/Documents/GitHub/EcoNiceApp/app/src/main/res/layout/activity_catch_that_junk_result.xml" value="0.1756578947368421" />
         <entry key="..\:/Users/avade/OneDrive/Documents/GitHub/EcoNiceApp/app/src/main/res/layout/activity_homepage.xml" value="0.1756578947368421" />
         <entry key="..\:/Users/avade/OneDrive/Documents/GitHub/EcoNiceApp/app/src/main/res/layout/activity_how_to_play.xml" value="0.2640625" />
         <entry key="..\:/Users/avade/OneDrive/Documents/GitHub/EcoNiceApp/app/src/main/res/layout/activity_main.xml" value="0.278125" />
@@ -33,7 +35,6 @@
         <entry key="..\:/Users/avade/OneDrive/Documents/GitHub/EcoNiceApp/app/src/main/res/layout/activity_nameinput_page.xml" value="0.26666666666666666" />
         <entry key="..\:/Users/avade/OneDrive/Documents/GitHub/EcoNiceApp/app/src/main/res/layout/activity_pg2above13.xml" value="0.1756578947368421" />
         <entry key="..\:/Users/avade/OneDrive/Documents/GitHub/EcoNiceApp/app/src/main/res/layout/activity_pg2below12.xml" value="0.1756578947368421" />
-        <entry key="..\:/Users/avade/OneDrive/Documents/GitHub/EcoNiceApp/app/src/main/res/layout/activity_question.xml" value="0.1756578947368421" />
         <entry key="..\:/Users/avade/OneDrive/Documents/GitHub/EcoNiceApp/app/src/main/res/layout/activity_quit.xml" value="0.2640625" />
         <entry key="..\:/Users/avade/OneDrive/Documents/GitHub/EcoNiceApp/app/src/main/res/layout/activity_splashscreen_bg.xml" value="0.25" />
         <entry key="..\:/Users/avade/OneDrive/Documents/GitHub/EcoNiceApp/app/src/main/res/layout/activity_start.xml" value="0.1756578947368421" />
