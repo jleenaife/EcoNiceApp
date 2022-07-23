@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class CatchThatJunkHome extends AppCompatActivity {
+public class CatchThatJunk1Home extends AppCompatActivity {
     private Button button;
 
     @Override
@@ -20,7 +20,7 @@ public class CatchThatJunkHome extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(CatchThatJunkHome.this, CatchThatJunkLevel1.class);
+                Intent intent = new Intent(CatchThatJunk1Home.this, CatchThatJunkLevel1.class);
                 startActivity(intent);
             }
         });

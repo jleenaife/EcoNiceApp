@@ -32,7 +32,7 @@ public class ScoreActivity extends AppCompatActivity {
     }
 
     public void openSecondGame(){
-        Intent intent = new Intent(this, CatchThatJunkHome.class);
+        Intent intent = new Intent(this, CatchThatJunk1Home.class);
         startActivity(intent);
     }
 }

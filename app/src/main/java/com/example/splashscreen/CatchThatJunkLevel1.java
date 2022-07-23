@@ -20,7 +20,7 @@ import java.util.TimerTask;
 public class CatchThatJunkLevel1 extends AppCompatActivity {
 
     // Elements
-    private TextView scoreLabel, startLabel;
+    private TextView scoreLabel, startLabel, startLabel2;
     private ImageView trashbin, banana, battery, can, carrot, leaves1;
 
     // Size
@@ -53,12 +53,13 @@ public class CatchThatJunkLevel1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_catch_that_junk);
+        setContentView(R.layout.activity_catch_that_junk_level1);
 
         soundPlayer = new SoundPlayer(this);
 
         scoreLabel = findViewById(R.id.scoreLabel);
         startLabel = findViewById(R.id.startLabel);
+        startLabel2 = findViewById(R.id.startLabel2);
         trashbin = findViewById(R.id.trashbin);
         banana = findViewById(R.id.banana);
         battery = findViewById(R.id.battery);
@@ -209,7 +210,7 @@ public class CatchThatJunkLevel1 extends AppCompatActivity {
             }
 
             // Show Result Activity
-            Intent intent = new Intent(getApplicationContext(), CatchThatJunkResult.class);
+            Intent intent = new Intent(getApplicationContext(), CatchThatJunk1Result.class);
             intent.putExtra("SCORE",score);
             startActivity(intent);
         }
@@ -230,9 +231,10 @@ public class CatchThatJunkLevel1 extends AppCompatActivity {
             }
 
             // Show Result Activity
-            Intent intent = new Intent(getApplicationContext(), CatchThatJunkResult.class);
+            Intent intent = new Intent(getApplicationContext(), CatchThatJunk1Result.class);
             intent.putExtra("SCORE",score);
             startActivity(intent);
+
         }
 
     }
@@ -251,6 +253,7 @@ public class CatchThatJunkLevel1 extends AppCompatActivity {
             trashbinY = trashbin.getY();
             trashbinSize = trashbin.getHeight();
             startLabel.setVisibility(View.GONE);
+            startLabel2.setVisibility(View.GONE);
 
             timer.schedule(new TimerTask() {
                 @Override

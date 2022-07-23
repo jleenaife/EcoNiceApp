@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">Catch That Junk</string>
 
-    <string name="point_carrot">10 point</string>
-    <string name="point_banana">20 point</string>
-    <string name="point_leaves1">30 point</string>
+    <string name="point_carrot">10 points</string>
+    <string name="point_banana">20 points</string>
+    <string name="point_leaves1">30 points</string>
     <string name="point_battery">Game Over</string>
     <string name="point_can">Game Over</string>
     <string name="btn_Start">START</string>

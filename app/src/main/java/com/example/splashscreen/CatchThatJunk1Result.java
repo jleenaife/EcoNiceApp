@@ -10,8 +10,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class CatchThatJunkResult extends AppCompatActivity {
-    private Button nextLvl;
+public class CatchThatJunk1Result extends AppCompatActivity {
+    private Button nextLvl, tryAgain;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +19,7 @@ public class CatchThatJunkResult extends AppCompatActivity {
         setContentView(R.layout.activity_catch_that_junk_result);
 
         nextLvl = findViewById(R.id.nextLevelBtn);
+        tryAgain = findViewById(R.id.tryAgainBtn);
 
         TextView scoreLabel = findViewById(R.id.scoreLabel);
         TextView highScoreLabel = findViewById(R.id.highScoreLabel);
@@ -44,7 +45,7 @@ public class CatchThatJunkResult extends AppCompatActivity {
             highScoreLabel.setText("High Score : " + highScore);
         }
 
-        if (score >= 250) {
+        if (score >= 300) {
             nextLvl.setVisibility(View.VISIBLE);
             textCongrats.setVisibility(View.VISIBLE);
         }
@@ -56,14 +57,18 @@ public class CatchThatJunkResult extends AppCompatActivity {
         nextLvl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(CatchThatJunkResult.this, CatchThatJunkLevel2.class);
+                Intent intent = new Intent(CatchThatJunk1Result.this, CatchThatJunk2Home.class);
                 startActivity(intent);
             }
         });
-    }
 
-    public void tryAgain(View view) {
-        startActivity(new Intent(getApplicationContext(), CatchThatJunkLevel1.class));
+        tryAgain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CatchThatJunk1Result.this, CatchThatJunkLevel1.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

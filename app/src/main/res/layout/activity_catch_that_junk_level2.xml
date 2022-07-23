@@ -1,9 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CatchThatJunkLevel2">
+    tools:context=".CatchThatJunkLevel2"
+    android:orientation="vertical"
+    android:background="@color/ctjgreen">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/scoreLabel2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Score : 0"
+        android:fontFamily="@font/pixelgamefont"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:padding="10dp"
+        android:textStyle="bold"/>
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/startLabel4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="50dp"
+            android:fontFamily="@font/pixelgamefont"
+            android:text="Sort Non-Biodegradable"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/startLabel3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tap_to_start"
+            android:textColor="@color/white"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/pixelgamefont"
+            android:textSize="30sp"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:id="@+id/trashbin2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/non_biodegradable"
+            android:layout_gravity="center_vertical"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/poop"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/poop"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/bottle"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/plastic_bottle"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/bag"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/plastic_bag"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/paper"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/paper"
+            tools:ignore="ContentDescription" />
+
+
+        <ImageView
+            android:id="@+id/paint"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/paint_bucket"
+            tools:ignore="ContentDescription" />
+
+
+    </FrameLayout>
+</LinearLayout>
