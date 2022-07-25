@@ -4,6 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.animation.Animator;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
@@ -272,8 +274,24 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("You will lose your progress. Are you sure you want to exit?")
+                .setCancelable(false)
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        finish();
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
 
+        AlertDialog alert = builder.create();
+        alert.show();
         countDown.cancel();
     }
 }

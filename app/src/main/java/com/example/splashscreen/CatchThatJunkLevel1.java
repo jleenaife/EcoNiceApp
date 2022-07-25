@@ -2,6 +2,9 @@ package com.example.splashscreen;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Point;
 import android.os.Bundle;
@@ -278,7 +281,29 @@ public class CatchThatJunkLevel1 extends AppCompatActivity {
     }
 
     @Override
-    public void onBackPressed() {}
+    public void onBackPressed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Are you sure you want to exit?")
+                .setCancelable(false)
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Intent intent = new Intent(CatchThatJunkLevel1.this, CatchThatJunk1Home.class);
+                        startActivity(intent);
+                        CatchThatJunkLevel1.this.finish();
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+
+        AlertDialog alert = builder.create();
+        alert.show();
+                
+    }
 }
 
 

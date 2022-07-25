@@ -2,7 +2,9 @@ package com.example.splashscreen;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -30,9 +32,9 @@ public class CatchThatJunk2Result extends AppCompatActivity {
 
         // High Score
         SharedPreferences sharedPreferences = getSharedPreferences("GAME_DATA", Context.MODE_PRIVATE);
-        int highScore = sharedPreferences.getInt("HIGH_SCORE",0);
+        int highScore2 = sharedPreferences.getInt("HIGH_SCORE",0);
 
-        if (score2 > highScore){
+        if (score2 > highScore2){
             // Update HighScore
             SharedPreferences.Editor editor = sharedPreferences.edit();
             editor.putInt("HIGH_SCORE",score2);
@@ -42,7 +44,7 @@ public class CatchThatJunk2Result extends AppCompatActivity {
 
 
         } else {
-            highScoreLabel.setText("High Score : " + highScore);
+            highScoreLabel.setText("High Score : " + highScore2);
         }
 
         if (score2 >= 300) {
@@ -73,5 +75,24 @@ public class CatchThatJunk2Result extends AppCompatActivity {
     }
 
     @Override
-    public void onBackPressed() {}
+    public void onBackPressed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("You will lose your progress. Are you sure you want to exit?")
+                .setCancelable(false)
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        finish();
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+
+        AlertDialog alert = builder.create();
+        alert.show();
+    }
 }
