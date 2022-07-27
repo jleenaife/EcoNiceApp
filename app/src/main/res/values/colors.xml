@@ -29,4 +29,8 @@
     <color name="ctjorange">#D58221</color>
     <color name="ctjyellow">#F6C619</color>
     <color name="ctjgreen">#899918</color>
+    <color name="abtlightbrown">#C7A39C</color>
+    <color name="abtpink">#E74F75</color>
+    <color name="abtrosepink">#D18089</color>
+    <color name="abtbeige">#F3EAD8</color>
 </resources>
