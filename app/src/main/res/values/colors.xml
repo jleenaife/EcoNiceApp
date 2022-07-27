@@ -10,11 +10,11 @@
     <color name="colorPrimary">#DF1919</color>
     <color name="colorPrimaryDark">#9B1515</color>
     <color name="colorAccent">#FFFFFF</color>
-    <color name="ecoblue">#6184D8</color>
-    <color name="ecogrape">#533A71</color>
-    <color name="ecotorc">#00E4CD</color>
+    <color name="ecoblue">#4ECDC2</color>
+    <color name="ecopink">#FD6B6C</color>
+    <color name="ecored">#C24E56</color>
     <color name="ecogreen">#9CEC5B</color>
-    <color name="ecoyellow">#F0F465</color>
+    <color name="ecolime">#CFF57F</color>
     <color name="quizpurple">#BD4291</color>
     <color name="quizmustard">#FFC54D</color>
     <color name="quizpurgrey">#9A86A4</color>
