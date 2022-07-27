@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/ecoblue">
+    android:background="@color/ecobeige">
 
     <TextView
         android:id="@+id/greetTxt"
@@ -20,7 +20,7 @@
         android:fontFamily="@font/pixelgamefont"
         android:gravity="center"
         android:text="Please choose your age:"
-        android:textColor="@color/white"
+        android:textColor="@color/ecobluegreen"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/b12_Btn"
@@ -43,7 +43,7 @@
         android:fontFamily="@font/pixelgamefont"
         android:gravity="center"
         android:text=""
-        android:textColor="@color/white"
+        android:textColor="@color/ecobluegreen"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/greetTxt"
@@ -67,7 +67,7 @@
         android:backgroundTint="@color/ecored"
         android:fontFamily="@font/pixelgamefont"
         android:text="13 and above"
-        android:textColor="@color/ecolime"
+        android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -90,7 +90,7 @@
         android:backgroundTint="@color/ecored"
         android:fontFamily="@font/pixelgamefont"
         android:text="12 and below"
-        android:textColor="@color/ecolime"
+        android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/b13_Btn"
