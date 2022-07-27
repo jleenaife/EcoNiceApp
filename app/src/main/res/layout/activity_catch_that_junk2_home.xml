@@ -149,5 +149,6 @@
         android:fontFamily="@font/pixelgamefont"
         android:textStyle="bold"
         android:textSize="20sp"
-        android:textColor="@color/ctjorange" />
+        android:textColor="@color/ctjorange"
+        android:background="@drawable/round_corner"/>
 </LinearLayout>
