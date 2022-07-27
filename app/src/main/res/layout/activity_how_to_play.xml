@@ -64,9 +64,11 @@
 
         <TextView
             android:id="@+id/textView8"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="-16dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
             android:fontFamily="@font/pixelgamefont"
             android:gravity="center"
             android:text="The game will ask you ten questions about different kinds of trash, and you'll have to tap the right answer. When you choose an answer, the choices will change color to show whether your answer was right or wrong. Green means it's correct and red means it's wrong.
@@ -82,9 +84,9 @@ Then, when the game is over, the scoreboard will show you how you did."
             android:id="@+id/imageView4"
             android:layout_width="230dp"
             android:layout_height="173dp"
-            android:layout_marginTop="216dp"
+            android:layout_marginTop="284dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintHorizontal_bias="0.508"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView7"
             app:srcCompat="@drawable/htp_lvl1_pic" />
@@ -106,9 +108,11 @@ Then, when the game is over, the scoreboard will show you how you did."
 
         <TextView
             android:id="@+id/textView10"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
             android:fontFamily="@font/pixelgamefont"
             android:gravity="center"
             android:text="On the game's first page, you can see what junk you have and how many points you have for it.
@@ -149,9 +153,11 @@ After tapping Start, hold the screen to raise the trash can and let go to drop i
 
         <TextView
             android:id="@+id/textView16"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
             android:fontFamily="@font/pixelgamefont"
             android:gravity="center"
             android:text="Tap the screen to make the turtle swim up and get through the gaps in the last game. The higher you go, the faster you have to tap."
