@@ -69,7 +69,8 @@
             android:layout_marginTop="-16dp"
             android:fontFamily="@font/pixelgamefont"
             android:gravity="center"
-            android:text="This game will give ten questions. Tap the correct answer. The player's resulting score will be shown after finishing the game."
+            android:text="The game will ask you ten questions about different kinds of trash, and you'll have to tap the right answer. When you choose an answer, the choices will change color to show whether your answer was right or wrong. Green means it's correct and red means it's wrong.
+Then, when the game is over, the scoreboard will show you how you did."
             android:textColor="@color/htpbeige"
             android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/imageView4"
@@ -81,9 +82,9 @@
             android:id="@+id/imageView4"
             android:layout_width="230dp"
             android:layout_height="173dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="216dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintHorizontal_bias="0.491"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView7"
             app:srcCompat="@drawable/htp_lvl1_pic" />
@@ -110,7 +111,8 @@
             android:layout_marginTop="30dp"
             android:fontFamily="@font/pixelgamefont"
             android:gravity="center"
-            android:text="After tapping the start, hold the screen to lift the trashbin. Collect the specific junk that corresponds to the type of trashbin."
+            android:text="On the game's first page, you can see what junk you have and how many points you have for it.
+After tapping Start, hold the screen to raise the trash can and let go to drop it. Pick up the trash that matches the type of trashcan."
             android:textColor="@color/htpbeige"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -118,22 +120,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnHowBack"
-            android:layout_width="228dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="500dp"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/round_corner"
-            android:backgroundTint="@color/htpred"
-            android:fontFamily="@font/pixelgamefont"
-            android:text="Back"
-            android:textColor="@color/htpbeige"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
 
         <ImageView
             android:id="@+id/imageView6"
@@ -167,12 +154,30 @@
             android:layout_marginTop="30dp"
             android:fontFamily="@font/pixelgamefont"
             android:gravity="center"
-            android:text="Complete the last game by tapping the screen to make the turtle swim up and get through gaps. The faster you tap, the higher you go."
+            android:text="Tap the screen to make the turtle swim up and get through the gaps in the last game. The higher you go, the faster you have to tap."
             android:textColor="@color/htpbeige"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnHowBack"
+            android:layout_width="228dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="500dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/round_corner"
+            android:backgroundTint="@color/htpred"
+            android:fontFamily="@font/pixelgamefont"
+            android:text="Back"
+            android:textColor="@color/htpbeige"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
