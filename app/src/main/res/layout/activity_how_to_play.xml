@@ -119,7 +119,7 @@
 
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button3"
+            android:id="@+id/btnHowBack"
             android:layout_width="228dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="500dp"

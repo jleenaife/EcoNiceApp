@@ -3,12 +3,24 @@ package com.example.splashscreen;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 public class HowToPlay extends AppCompatActivity {
+
+    Button btnHowBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_how_to_play);
+
+        btnHowBack = findViewById(R.id.btnHowBack);
+        btnHowBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
     }
 }
