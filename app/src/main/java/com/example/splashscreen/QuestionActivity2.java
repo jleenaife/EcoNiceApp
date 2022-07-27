@@ -39,7 +39,7 @@ public class QuestionActivity2 extends AppCompatActivity implements View.OnClick
     private int quesNum;
     public int counter;
     private CountDownTimer countDown;
-    private int score;
+    private int score2;
     private FirebaseFirestore firestore;
 
     @Override
@@ -62,7 +62,7 @@ public class QuestionActivity2 extends AppCompatActivity implements View.OnClick
 
         getQuestionList();
 
-        score = 0;
+        score2 = 0;
     }
     private void getQuestionList()
     {
@@ -170,7 +170,7 @@ public class QuestionActivity2 extends AppCompatActivity implements View.OnClick
         {
             //Right Answer
             ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.GREEN));
-            score++;
+            score2++;
         }
         else
         {
@@ -218,7 +218,7 @@ public class QuestionActivity2 extends AppCompatActivity implements View.OnClick
         {
             // Go to Score Activity
             Intent intent = new Intent(QuestionActivity2.this,ScoreActivity.class);
-            intent.putExtra("SCORE", String.valueOf(score) + "/" + String.valueOf(questionList2.size()));
+            intent.putExtra("SCORE", String.valueOf(score2) + "/" + String.valueOf(questionList2.size()));
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
             //QuestionActivity.this.finish();

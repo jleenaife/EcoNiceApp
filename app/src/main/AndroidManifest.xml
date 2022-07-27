@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.splashscreen" >
+    package="com.example.splashscreen">
 
     <application
         android:allowBackup="true"
@@ -8,9 +8,21 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.SplashScreen" >
+        android:theme="@style/Theme.SplashScreen">
         <activity
-            android:name=".Storyline"
+            android:name=".End"
+            android:exported="false" />
+        <activity
+            android:name=".SaveTheTurtle"
+            android:exported="false" />
+        <activity
+            android:name=".Storyline3"
+            android:exported="false" />
+        <activity
+            android:name=".Storyline2"
+            android:exported="false" />
+        <activity
+            android:name=".Storyline1"
             android:exported="false" />
         <activity
             android:name=".CatchThatJunk2Result"
@@ -68,7 +80,7 @@
             android:exported="false" />
         <activity
             android:name=".SplashScreen"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

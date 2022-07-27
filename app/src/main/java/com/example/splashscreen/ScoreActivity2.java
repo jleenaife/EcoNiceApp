@@ -22,8 +22,8 @@ public class ScoreActivity2 extends AppCompatActivity {
         score = findViewById(R.id.sa_score2);
         done = findViewById(R.id.sa_done2);
 
-        String score_str = getIntent().getStringExtra("SCORE");
-        score.setText(score_str);
+        String score_str2 = getIntent().getStringExtra("SCORE");
+        score.setText(score_str2);
 
         done.setOnClickListener(new View.OnClickListener() {
             @Override
