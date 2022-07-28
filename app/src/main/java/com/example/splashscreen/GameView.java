@@ -73,7 +73,7 @@ public class GameView extends View {
 
     private void initPillar() {
         sumpillar = 6;
-        distance = 650*Constants.SCREEN_HEIGHT/1920;
+        distance = 700*Constants.SCREEN_HEIGHT/1920;
         arrPillars = new ArrayList<>();
         for (int i =0; i < sumpillar; i++){
             if(i<sumpillar/2){

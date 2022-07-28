@@ -7,6 +7,7 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Point;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Display;
@@ -52,6 +53,8 @@ public class CatchThatJunkLevel1 extends AppCompatActivity {
 
     // SoundPlayer
     private SoundPlayer soundPlayer;
+    // MediaPlayer
+    private MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,6 +96,10 @@ public class CatchThatJunkLevel1 extends AppCompatActivity {
 
         scoreLabel.setText("Score : " + score);
         //scoreLabel.setText(getString(R.string.score));
+
+        mediaPlayer = MediaPlayer.create(this, R.raw.sillychipsong);
+        mediaPlayer.setLooping(true);
+        mediaPlayer.start();
     }
 
     public void changePos() {
@@ -303,6 +310,18 @@ public class CatchThatJunkLevel1 extends AppCompatActivity {
         AlertDialog alert = builder.create();
         alert.show();
                 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mediaPlayer.start();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mediaPlayer.pause();
     }
 }
 

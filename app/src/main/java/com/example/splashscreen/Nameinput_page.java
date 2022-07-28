@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,6 +16,7 @@ public class Nameinput_page extends AppCompatActivity {
     private EditText nameText;
     private Button button;
     private String name;
+    private MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +32,9 @@ public class Nameinput_page extends AppCompatActivity {
                 sendData();
             }
         });
+        mediaPlayer = MediaPlayer.create(this, R.raw.sillychipsong);
+        mediaPlayer.setLooping(true);
+        mediaPlayer.start();
     }
 
     public void sendData() {
@@ -59,5 +65,17 @@ public class Nameinput_page extends AppCompatActivity {
 
         AlertDialog alert = builder.create();
         alert.show();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mediaPlayer.start();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mediaPlayer.pause();
     }
 }
