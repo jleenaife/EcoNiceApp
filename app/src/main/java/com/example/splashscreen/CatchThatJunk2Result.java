@@ -31,7 +31,7 @@ public class CatchThatJunk2Result extends AppCompatActivity {
         scoreLabel.setText("Score : " + score2);
 
         // High Score
-        SharedPreferences sharedPreferences = getSharedPreferences("GAME_DATA", Context.MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences("GAME_DATA2", Context.MODE_PRIVATE);
         int highScore2 = sharedPreferences.getInt("HIGH_SCORE",0);
 
         if (score2 > highScore2){
@@ -59,7 +59,7 @@ public class CatchThatJunk2Result extends AppCompatActivity {
         continueLvl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(CatchThatJunk2Result.this, Storyline.class);
+                Intent intent = new Intent(CatchThatJunk2Result.this, Storyline1.class);
                 startActivity(intent);
             }
         });

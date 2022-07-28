@@ -1,6 +1,7 @@
 package com.example.splashscreen;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.animation.Animator;
@@ -159,7 +160,10 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
                 break;
             default:
         }
-        countDown.cancel();
+        try{
+            countDown.cancel();
+        }catch (NullPointerException ignored){
+        }
         checkAnswer(selectedOption, v);
     }
 
@@ -221,7 +225,7 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
             intent.putExtra("SCORE", String.valueOf(score) + "/" + String.valueOf(questionList.size()));
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
-            //QuestionActivity.this.finish();
+            QuestionActivity.this.finish();
         }
     }
 
