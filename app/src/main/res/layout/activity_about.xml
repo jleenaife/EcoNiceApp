@@ -1,19 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
-
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/abtlightbrown">
 
     <TextView
-        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="123dp"
-        android:layout_marginBottom="435dp"
-        android:text="PROGRAMMER'S INFO" />
-</RelativeLayout>
+        android:text="ECO-NICE!"
+        android:fontFamily="@font/pixelgamefont"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+    <ImageView
+        android:layout_width="141dp"
+        android:layout_height="142dp"
+        android:src="@drawable/laevag_logo"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:layout_width="327dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/pixelgamefont"
+        android:gravity="center"
+        android:paddingTop="20dp"
+        android:text="This app was made by the following members of Group Lævag of
+        BSCOE 2-4"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@color/abtrosepink">
+
+        <TableRow
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ann"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pixelgamefont"
+                android:paddingLeft="10dp"
+                android:text="Ann Vergie Adecer"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                tools:ignore="RtlHardcoded,RtlSymmetry" />
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/andy"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pixelgamefont"
+                android:paddingLeft="10dp"
+                android:text="Patricia Andy Aquino"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                tools:ignore="RtlHardcoded,RtlSymmetry" />
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/jona"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pixelgamefont"
+                android:paddingLeft="10dp"
+                android:text="Jonalee Lorie Naife"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                tools:ignore="RtlHardcoded,RtlSymmetry" />
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/kinyo"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pixelgamefont"
+                android:paddingLeft="10dp"
+                android:text="Angelique Grace Quiñones"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                tools:ignore="RtlHardcoded,RtlSymmetry" />
+        </TableRow>
+
+    </TableLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAbtBack"
+        android:layout_width="228dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/abtpink"
+        android:text="BACK"
+        android:fontFamily="@font/pixelgamefont"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/abtbeige"
+        android:background="@drawable/round_corner"/>
+
+</LinearLayout>

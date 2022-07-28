@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/ecoblue"
+    android:background="@color/ecobeige"
     tools:context=".below12home">
 
     <TextView
@@ -18,7 +18,7 @@
         android:fontFamily="@font/pixelgamefont"
         android:gravity="center"
         android:text="ECO QUIZ"
-        android:textColor="@color/ecogreen"
+        android:textColor="@color/ecodarkblue"
         android:textSize="60sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/imageView2"
@@ -38,10 +38,10 @@
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="200dp"
         android:background="@drawable/round_corner"
-        android:backgroundTint="@color/ecotorc"
+        android:backgroundTint="@color/ecobluegreen"
         android:fontFamily="@font/pixelgamefont"
         android:text="START"
-        android:textColor="@color/ecogrape"
+        android:textColor="@color/ecodarkblue"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

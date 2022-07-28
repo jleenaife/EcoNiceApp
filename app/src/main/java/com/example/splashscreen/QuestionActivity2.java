@@ -4,6 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.animation.Animator;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
@@ -37,7 +39,7 @@ public class QuestionActivity2 extends AppCompatActivity implements View.OnClick
     private int quesNum;
     public int counter;
     private CountDownTimer countDown;
-    private int score;
+    private int score2;
     private FirebaseFirestore firestore;
 
     @Override
@@ -60,7 +62,7 @@ public class QuestionActivity2 extends AppCompatActivity implements View.OnClick
 
         getQuestionList();
 
-        score = 0;
+        score2 = 0;
     }
     private void getQuestionList()
     {
@@ -168,7 +170,7 @@ public class QuestionActivity2 extends AppCompatActivity implements View.OnClick
         {
             //Right Answer
             ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.GREEN));
-            score++;
+            score2++;
         }
         else
         {
@@ -216,7 +218,7 @@ public class QuestionActivity2 extends AppCompatActivity implements View.OnClick
         {
             // Go to Score Activity
             Intent intent = new Intent(QuestionActivity2.this,ScoreActivity.class);
-            intent.putExtra("SCORE", String.valueOf(score) + "/" + String.valueOf(questionList2.size()));
+            intent.putExtra("SCORE", String.valueOf(score2) + "/" + String.valueOf(questionList2.size()));
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
             //QuestionActivity.this.finish();
@@ -272,7 +274,24 @@ public class QuestionActivity2 extends AppCompatActivity implements View.OnClick
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("You will lose your progress. Are you sure you want to exit?")
+                .setCancelable(false)
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        finish();
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+
+        AlertDialog alert = builder.create();
+        alert.show();
 
         countDown.cancel();
     }

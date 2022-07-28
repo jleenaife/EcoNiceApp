@@ -10,11 +10,15 @@
     <color name="colorPrimary">#DF1919</color>
     <color name="colorPrimaryDark">#9B1515</color>
     <color name="colorAccent">#FFFFFF</color>
-    <color name="ecoblue">#6184D8</color>
-    <color name="ecogrape">#533A71</color>
-    <color name="ecotorc">#00E4CD</color>
-    <color name="ecogreen">#9CEC5B</color>
-    <color name="ecoyellow">#F0F465</color>
+    <color name="hpgrey">#54757A</color>
+    <color name="hpviolet">#572437</color>
+    <color name="hporange">#DA5C41</color>
+    <color name="hpyellow">#EBCF75</color>
+    <color name="ecobeige">#FDF6C6</color>
+    <color name="ecopink">#FD6B6C</color>
+    <color name="ecored">#F1394F</color>
+    <color name="ecobluegreen">#13BAB4</color>
+    <color name="ecodarkblue">#13737A</color>
     <color name="quizpurple">#BD4291</color>
     <color name="quizmustard">#FFC54D</color>
     <color name="quizpurgrey">#9A86A4</color>
@@ -29,4 +33,8 @@
     <color name="ctjorange">#D58221</color>
     <color name="ctjyellow">#F6C619</color>
     <color name="ctjgreen">#899918</color>
+    <color name="abtlightbrown">#C7A39C</color>
+    <color name="abtpink">#E74F75</color>
+    <color name="abtrosepink">#D18089</color>
+    <color name="abtbeige">#F3EAD8</color>
 </resources>

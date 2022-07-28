@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CatchThatJunk1Result"
+    tools:context=".CatchThatJunk2Result"
     android:orientation="vertical"
     android:gravity="center"
     android:background="@color/ctjplum">
@@ -40,7 +40,7 @@
         android:layout_marginTop="80dp"/>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/tryAgainBtn"
+        android:id="@+id/tryAgainBtn2"
         android:layout_width="276dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -52,13 +52,13 @@
         android:textStyle="bold" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/nextLevelBtn"
+        android:id="@+id/continueBtn"
         android:layout_width="276dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/ctjyellow"
         android:fontFamily="@font/pixelgamefont"
-        android:text="@string/btn_next_level"
+        android:text="CONTINUE"
         android:textColor="@color/ctjorange"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -69,7 +69,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:fontFamily="@font/pixelgamefont"
-        android:text="Congrats! Next Level Unlocked"
+        android:text="Congratulations!"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold" />

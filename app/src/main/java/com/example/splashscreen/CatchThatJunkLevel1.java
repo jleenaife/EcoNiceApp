@@ -2,6 +2,9 @@ package com.example.splashscreen;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Point;
 import android.os.Bundle;
@@ -17,10 +20,10 @@ import android.widget.TextView;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class CatchThatJunk extends AppCompatActivity {
+public class CatchThatJunkLevel1 extends AppCompatActivity {
 
     // Elements
-    private TextView scoreLabel, startLabel;
+    private TextView scoreLabel, startLabel, startLabel2;
     private ImageView trashbin, banana, battery, can, carrot, leaves1;
 
     // Size
@@ -53,12 +56,13 @@ public class CatchThatJunk extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_catch_that_junk);
+        setContentView(R.layout.activity_catch_that_junk_level1);
 
         soundPlayer = new SoundPlayer(this);
 
         scoreLabel = findViewById(R.id.scoreLabel);
         startLabel = findViewById(R.id.startLabel);
+        startLabel2 = findViewById(R.id.startLabel2);
         trashbin = findViewById(R.id.trashbin);
         banana = findViewById(R.id.banana);
         battery = findViewById(R.id.battery);
@@ -209,7 +213,7 @@ public class CatchThatJunk extends AppCompatActivity {
             }
 
             // Show Result Activity
-            Intent intent = new Intent(getApplicationContext(), CatchThatJunkResult.class);
+            Intent intent = new Intent(getApplicationContext(), CatchThatJunk1Result.class);
             intent.putExtra("SCORE",score);
             startActivity(intent);
         }
@@ -230,9 +234,10 @@ public class CatchThatJunk extends AppCompatActivity {
             }
 
             // Show Result Activity
-            Intent intent = new Intent(getApplicationContext(), CatchThatJunkResult.class);
+            Intent intent = new Intent(getApplicationContext(), CatchThatJunk1Result.class);
             intent.putExtra("SCORE",score);
             startActivity(intent);
+
         }
 
     }
@@ -251,6 +256,7 @@ public class CatchThatJunk extends AppCompatActivity {
             trashbinY = trashbin.getY();
             trashbinSize = trashbin.getHeight();
             startLabel.setVisibility(View.GONE);
+            startLabel2.setVisibility(View.GONE);
 
             timer.schedule(new TimerTask() {
                 @Override
@@ -275,7 +281,29 @@ public class CatchThatJunk extends AppCompatActivity {
     }
 
     @Override
-    public void onBackPressed() {}
+    public void onBackPressed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Are you sure you want to exit?")
+                .setCancelable(false)
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Intent intent = new Intent(CatchThatJunkLevel1.this, CatchThatJunk1Home.class);
+                        startActivity(intent);
+                        CatchThatJunkLevel1.this.finish();
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+
+        AlertDialog alert = builder.create();
+        alert.show();
+                
+    }
 }
 
 
