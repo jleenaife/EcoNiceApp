@@ -32,6 +32,7 @@
         android:padding="5dp"
         android:layout_centerInParent="true"
         android:background="@color/hpgrey"
+        android:textSize="20dp"
         android:textColor="@color/white"/>
 
     <RelativeLayout
