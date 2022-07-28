@@ -12,20 +12,20 @@ import android.widget.TextView;
 
 public class ScoreActivity2 extends AppCompatActivity {
 
-    private TextView score;
-    private Button done;
+    private TextView score2;
+    private Button done2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score2);
 
-        score = findViewById(R.id.sa_score2);
-        done = findViewById(R.id.sa_done2);
+        score2 = findViewById(R.id.sa_score2);
+        done2 = findViewById(R.id.sa_done2);
 
-        String score_str2 = getIntent().getStringExtra("SCORE");
-        score.setText(score_str2);
+        String score_str2 = getIntent().getStringExtra("SCORE13");
+        score2.setText(score_str2);
 
-        done.setOnClickListener(new View.OnClickListener() {
+        done2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openSecondGame();
@@ -34,7 +34,7 @@ public class ScoreActivity2 extends AppCompatActivity {
     }
 
     public void openSecondGame(){
-        Intent intent = new Intent(this, CatchThatJunk1Home.class);
+        Intent intent = new Intent(ScoreActivity2.this, CatchThatJunk1Home.class);
         startActivity(intent);
     }
 
