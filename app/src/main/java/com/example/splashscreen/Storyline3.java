@@ -21,11 +21,11 @@ public class Storyline3 extends AppCompatActivity {
         st3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Storyline3.this, SaveTheTurtle.class);
+                Intent intent = new Intent(Storyline3.this, Storyline4.class);
                 startActivity(intent);
             }
         });
-        mediaPlayer = MediaPlayer.create(this, R.raw.sillychipsong);
+        mediaPlayer = MediaPlayer.create(this, R.raw.story2);
         mediaPlayer.setLooping(true);
         mediaPlayer.start();
     }

@@ -96,7 +96,7 @@ public class CatchThatJunkLevel2 extends AppCompatActivity {
         scoreLabel2.setText("Score : " + score2);
         //scoreLabel.setText(getString(R.string.score));
 
-        mediaPlayer = MediaPlayer.create(this, R.raw.sillychipsong);
+        mediaPlayer = MediaPlayer.create(this, R.raw.junk);
         mediaPlayer.setLooping(true);
         mediaPlayer.start();
     }

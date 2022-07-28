@@ -50,7 +50,7 @@ public class SaveTheTurtle extends AppCompatActivity {
                 gv.reset();
             }
         });
-        mediaPlayer = MediaPlayer.create(this, R.raw.sillychipsong);
+        mediaPlayer = MediaPlayer.create(this, R.raw.turtle);
         mediaPlayer.setLooping(true);
         mediaPlayer.start();
     }

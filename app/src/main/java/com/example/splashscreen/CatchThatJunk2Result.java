@@ -73,7 +73,7 @@ public class CatchThatJunk2Result extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        mediaPlayer = MediaPlayer.create(this, R.raw.sillychipsong);
+        mediaPlayer = MediaPlayer.create(this, R.raw.main);
         mediaPlayer.setLooping(true);
         mediaPlayer.start();
     }

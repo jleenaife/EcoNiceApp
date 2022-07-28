@@ -32,7 +32,7 @@ public class Nameinput_page extends AppCompatActivity {
                 sendData();
             }
         });
-        mediaPlayer = MediaPlayer.create(this, R.raw.sillychipsong);
+        mediaPlayer = MediaPlayer.create(this, R.raw.main);
         mediaPlayer.setLooping(true);
         mediaPlayer.start();
     }

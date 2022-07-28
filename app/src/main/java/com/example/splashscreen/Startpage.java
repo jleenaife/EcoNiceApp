@@ -44,7 +44,7 @@ public class Startpage extends AppCompatActivity {
             };
         });
 
-        mediaPlayer = MediaPlayer.create(this, R.raw.sillychipsong);
+        mediaPlayer = MediaPlayer.create(this, R.raw.main);
         mediaPlayer.setLooping(true);
         mediaPlayer.start();
     }

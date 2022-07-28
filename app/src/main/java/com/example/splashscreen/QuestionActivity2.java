@@ -61,7 +61,7 @@ public class QuestionActivity2 extends AppCompatActivity implements View.OnClick
         getQuestionList();
 
         score2 = 0;
-        mediaPlayer = MediaPlayer.create(this, R.raw.sillychipsong);
+        mediaPlayer = MediaPlayer.create(this, R.raw.quiz);
         mediaPlayer.setLooping(true);
         mediaPlayer.start();
     }

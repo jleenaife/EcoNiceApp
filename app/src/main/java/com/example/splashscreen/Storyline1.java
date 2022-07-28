@@ -25,7 +25,7 @@ public class Storyline1 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        mediaPlayer = MediaPlayer.create(this, R.raw.sillychipsong);
+        mediaPlayer = MediaPlayer.create(this, R.raw.story2);
         mediaPlayer.setLooping(true);
         mediaPlayer.start();
     }
