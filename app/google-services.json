@@ -1,10 +1,48 @@
 {
   "project_info": {
     "project_number": "518495185672",
+    "firebase_url": "https://eco-nice-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "eco-nice",
     "storage_bucket": "eco-nice.appspot.com"
   },
   "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:518495185672:android:59e9a9cfd90147ca0f9abd",
+        "android_client_info": {
+          "package_name": "com.example.ecoquizadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "518495185672-bfapj1527q9s3rd4vc2n82fd6j9trg21.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ecoquizadmin",
+            "certificate_hash": "c13307b3df470df2c1d251f8a59e8560f270cf02"
+          }
+        },
+        {
+          "client_id": "518495185672-hlgg6to123d5fgbe9b4j308utb1jjl1m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCI4hce0YyIdLbQNhEUPZT_gvljkxU5xlg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "518495185672-hlgg6to123d5fgbe9b4j308utb1jjl1m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
     {
       "client_info": {
         "mobilesdk_app_id": "1:518495185672:android:c37c94de63a5a02e0f9abd",
