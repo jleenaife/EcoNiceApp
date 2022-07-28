@@ -31,10 +31,10 @@
             android:id="@+id/textView6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:layout_marginBottom="16dp"
             android:layout_marginLeft="30dp"
+            android:layout_marginTop="32dp"
             android:layout_marginRight="30dp"
+            android:layout_marginBottom="16dp"
             android:fontFamily="@font/pixelgamefont"
             android:gravity="center"
             android:text="Welcome to Eco-Nice! You will be playing three different games regarding waste management."
@@ -112,8 +112,8 @@ Then, when the game is over, the scoreboard will show you how you did."
             android:id="@+id/textView10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
             android:layout_marginRight="30dp"
             android:fontFamily="@font/pixelgamefont"
             android:gravity="center"
@@ -124,9 +124,6 @@ After tapping Start, hold the screen to raise the trash can and let go to drop i
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView9" />
-
-
-
 
         <ImageView
             android:id="@+id/imageView6"
@@ -157,8 +154,8 @@ After tapping Start, hold the screen to raise the trash can and let go to drop i
             android:id="@+id/textView16"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
             android:layout_marginRight="30dp"
             android:fontFamily="@font/pixelgamefont"
             android:gravity="center"
@@ -169,11 +166,22 @@ After tapping Start, hold the screen to raise the trash can and let go to drop i
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="199dp"
+            android:layout_height="202dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView16"
+            app:srcCompat="@drawable/turtle2"
+            tools:ignore="MissingConstraints" />
+
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnHowBack"
             android:layout_width="228dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="500dp"
+            android:layout_marginTop="100dp"
             android:layout_marginBottom="30dp"
             android:background="@drawable/round_corner"
             android:backgroundTint="@color/htpred"
@@ -184,8 +192,9 @@ After tapping Start, hold the screen to raise the trash can and let go to drop i
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView16" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView7" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
