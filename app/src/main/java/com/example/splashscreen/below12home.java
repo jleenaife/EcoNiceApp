@@ -39,10 +39,6 @@ public class below12home extends AppCompatActivity {
                 onBackPressed();
             }
         });
-
-        mediaPlayer = MediaPlayer.create(this, R.raw.main);
-        mediaPlayer.setLooping(true);
-        mediaPlayer.start();
     }
 
     @Override

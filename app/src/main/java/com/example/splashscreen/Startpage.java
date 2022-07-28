@@ -56,10 +56,6 @@ public class Startpage extends AppCompatActivity {
                 onBackPressed();
             }
         });
-
-        mediaPlayer = MediaPlayer.create(this, R.raw.main);
-        mediaPlayer.setLooping(true);
-        mediaPlayer.start();
     }
 
     public void open12and() {
