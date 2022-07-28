@@ -15,6 +15,7 @@ public class Startpage extends AppCompatActivity {
     private Button button;
     private String name;
     private MediaPlayer mediaPlayer;
+    Button btnStartBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +43,18 @@ public class Startpage extends AppCompatActivity {
             public void onClick(View view) {
                 open13();
             };
+        });
+
+        mediaPlayer = MediaPlayer.create(this, R.raw.main);
+        mediaPlayer.setLooping(true);
+        mediaPlayer.start();
+
+        btnStartBack = findViewById(R.id.btnStartBack);
+        btnStartBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
         });
 
         mediaPlayer = MediaPlayer.create(this, R.raw.main);

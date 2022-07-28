@@ -146,7 +146,7 @@
             android:backgroundTint="@color/htpbeige"
             android:fontFamily="@font/pixelgamefont"
             android:text="START AGAIN"
-            android:textColor="@color/htpgreen"
+            android:textColor="@color/htpdarkblue"
             android:textSize="20sp" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -160,7 +160,7 @@
             android:backgroundTint="@color/htpbeige"
             android:fontFamily="@font/pixelgamefont"
             android:text="QUIT"
-            android:textColor="@color/htpgreen"
+            android:textColor="@color/htpdarkblue"
             android:textSize="20sp" />
 
     </RelativeLayout>
