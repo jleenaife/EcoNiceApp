@@ -5,7 +5,6 @@ import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.media.AudioAttributes;
 import android.media.AudioManager;
 import android.media.SoundPool;
@@ -119,7 +118,6 @@ public class GameView extends View {
                         && this.turtle.getX() + this.turtle.getWidth() <= arrPillars.get(i).getX() + arrPillars.get(i).getWidth() / 2 + Pillar.speed
                         && i < sumpillar / 2) {
                     score++;
-
                     if(score>bestscore){
                         bestscore = score;
                         SharedPreferences sp = context.getSharedPreferences("gamesetting", Context.MODE_PRIVATE);

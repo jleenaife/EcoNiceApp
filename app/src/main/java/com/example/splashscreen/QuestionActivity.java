@@ -1,6 +1,7 @@
 package com.example.splashscreen;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.animation.Animator;
@@ -159,7 +160,10 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
                 break;
             default:
         }
-        countDown.cancel();
+        try{
+            countDown.cancel();
+        }catch (NullPointerException ignored){
+        }
         checkAnswer(selectedOption, v);
     }
 

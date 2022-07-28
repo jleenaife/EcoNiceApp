@@ -25,7 +25,7 @@ public class SaveTheTurtle extends AppCompatActivity {
         this.getWindowManager().getDefaultDisplay().getMetrics(dm);
         Constants.SCREEN_WIDTH = dm.widthPixels;
         Constants.SCREEN_HEIGHT = dm.heightPixels;
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_save_the_turtle);
         txt_score = findViewById(R.id.txt_score);
         txt_best_score = findViewById(R.id.txt_bestScore);
         txt_score_over = findViewById(R.id.txt_scoreOver);
@@ -36,9 +36,9 @@ public class SaveTheTurtle extends AppCompatActivity {
         btn_start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                gv.setStart(true);
                 txt_score.setVisibility(view.VISIBLE);
                 btn_start.setVisibility(View.INVISIBLE);
+                gv.setStart(true);
             }
         });
         rl_game_over.setOnClickListener(new View.OnClickListener() {
