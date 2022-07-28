@@ -7,6 +7,7 @@ import android.animation.Animator;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
@@ -37,6 +38,7 @@ public class QuestionActivity2 extends AppCompatActivity implements View.OnClick
     private CountDownTimer countDown;
     private int score2;
     private FirebaseFirestore firestore;
+    private MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +61,9 @@ public class QuestionActivity2 extends AppCompatActivity implements View.OnClick
         getQuestionList();
 
         score2 = 0;
+        mediaPlayer = MediaPlayer.create(this, R.raw.quiz);
+        mediaPlayer.setLooping(true);
+        mediaPlayer.start();
     }
     private void getQuestionList()
     {
@@ -273,5 +278,17 @@ public class QuestionActivity2 extends AppCompatActivity implements View.OnClick
 
     @Override
     public void onBackPressed() {
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mediaPlayer.start();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mediaPlayer.pause();
     }
 }
