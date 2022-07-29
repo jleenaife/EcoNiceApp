@@ -2,11 +2,13 @@ package com.example.splashscreen;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 public class About extends AppCompatActivity {
+    private MediaPlayer mediaPlayer;
 
     Button btnAbtBack;
 
@@ -20,7 +22,24 @@ public class About extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 onBackPressed();
+                About.this.finish();
             }
         });
+
+        mediaPlayer = MediaPlayer.create(this, R.raw.main);
+        mediaPlayer.setLooping(true);
+        mediaPlayer.start();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mediaPlayer.start();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mediaPlayer.pause();
     }
 }

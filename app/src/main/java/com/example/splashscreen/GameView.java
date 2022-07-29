@@ -1,6 +1,7 @@
 package com.example.splashscreen;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -73,7 +74,7 @@ public class GameView extends View {
 
     private void initPillar() {
         sumpillar = 6;
-        distance = 650*Constants.SCREEN_HEIGHT/1920;
+        distance = 700*Constants.SCREEN_HEIGHT/1920;
         arrPillars = new ArrayList<>();
         for (int i =0; i < sumpillar; i++){
             if(i<sumpillar/2){
@@ -112,6 +113,7 @@ public class GameView extends View {
                     SaveTheTurtle.txt_best_score.setText("best: " + bestscore);
                     SaveTheTurtle.txt_score.setVisibility(INVISIBLE);
                     SaveTheTurtle.rl_game_over.setVisibility(VISIBLE);
+
                 }
 
                 if (this.turtle.getX() + this.turtle.getWidth() > arrPillars.get(i).getX() + arrPillars.get(i).getWidth() / 2
@@ -126,6 +128,13 @@ public class GameView extends View {
                         editor.apply();
                     }
                     SaveTheTurtle.txt_score.setText("" + score);
+
+                    if(score==30){
+                        SaveTheTurtle.txt_score.setVisibility(INVISIBLE);
+                        SaveTheTurtle.rl_game_over.setVisibility(INVISIBLE);
+                        SaveTheTurtle.btn_start.setVisibility(INVISIBLE);
+                        SaveTheTurtle.rl_complete.setVisibility(VISIBLE);
+                    }
 
                 }
                 if (this.arrPillars.get(i).getX() < -arrPillars.get(i).getWidth()) {

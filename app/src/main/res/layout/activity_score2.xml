@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ScoreActivity"
-    android:background="@color/quizblue">
+    tools:context=".ScoreActivity2"
+    android:background="#EB7245">
 
     <LinearLayout
         android:id="@+id/linearLayout3"
@@ -14,7 +14,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="24dp"
-        android:background="@color/quizyellow"
+        android:background="#C1464B"
         android:orientation="vertical"
         android:paddingBottom="32dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,9 +29,8 @@
             android:fontFamily="@font/pixelgamefont"
             android:gravity="center"
             android:text="SCORE"
-            android:textColor="@android:color/black"
-            android:textSize="32sp"
-            android:textStyle="bold" />
+            android:textColor="#30012F"
+            android:textSize="32sp" />
 
         <View
             android:id="@+id/divider"
@@ -47,25 +46,24 @@
             android:fontFamily="@font/pixelgamefont"
             android:gravity="center"
             android:text="5 / 10"
-            android:textColor="@android:color/black"
+            android:textColor="#30012F"
             android:textSize="32sp"
             android:textStyle="bold" />
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/sa_done2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
         android:layout_marginStart="64dp"
         android:layout_marginEnd="64dp"
         android:layout_marginBottom="64dp"
         android:background="@drawable/round_corner"
-        android:backgroundTint="@color/quizyellow"
+        android:backgroundTint="#601845"
         android:text="Done"
         android:fontFamily="@font/pixelgamefont"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:textSize="20sp"
+        android:textColor="#EB7245"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"

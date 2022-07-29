@@ -6,6 +6,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Point;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Display;
@@ -52,6 +53,8 @@ public class CatchThatJunkLevel2 extends AppCompatActivity {
     // SoundPlayer
     private SoundPlayer soundPlayer;
 
+    private MediaPlayer mediaPlayer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -92,6 +95,10 @@ public class CatchThatJunkLevel2 extends AppCompatActivity {
 
         scoreLabel2.setText("Score : " + score2);
         //scoreLabel.setText(getString(R.string.score));
+
+        mediaPlayer = MediaPlayer.create(this, R.raw.junk);
+        mediaPlayer.setLooping(true);
+        mediaPlayer.start();
     }
 
     public void changePos() {
@@ -178,6 +185,7 @@ public class CatchThatJunkLevel2 extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), CatchThatJunk2Result.class);
                 intent.putExtra("SCORE", score2);
                 startActivity(intent);
+                CatchThatJunkLevel2.this.finish();
             }
         }
 
@@ -199,6 +207,7 @@ public class CatchThatJunkLevel2 extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), CatchThatJunk2Result.class);
                 intent.putExtra("SCORE", score2);
                 startActivity(intent);
+                CatchThatJunkLevel2.this.finish();
             }
         }
 
@@ -298,6 +307,18 @@ public class CatchThatJunkLevel2 extends AppCompatActivity {
 
         AlertDialog alert = builder.create();
         alert.show();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mediaPlayer.start();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mediaPlayer.pause();
     }
 }
 
