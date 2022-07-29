@@ -100,4 +100,20 @@
         app:layout_constraintTop_toBottomOf="@+id/greetTxt"
         app:layout_constraintVertical_bias="0.873" />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnStartBack"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_corner"
+        android:backgroundTint="@color/ecored"
+        android:fontFamily="@font/pixelgamefont"
+        android:text="Back"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/b13_Btn" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
