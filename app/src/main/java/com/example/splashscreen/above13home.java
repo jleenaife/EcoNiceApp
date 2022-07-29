@@ -24,6 +24,7 @@ public class above13home extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(above13home.this, QuestionActivity2.class);
                 startActivity(intent);
+                above13home.this.finish();
             }
         });
 

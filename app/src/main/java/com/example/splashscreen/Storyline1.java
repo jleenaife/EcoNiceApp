@@ -23,6 +23,7 @@ public class Storyline1 extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Storyline1.this,Storyline2.class);
                 startActivity(intent);
+                Storyline1.this.finish();
             }
         });
         mediaPlayer = MediaPlayer.create(this, R.raw.story2);

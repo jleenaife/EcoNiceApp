@@ -63,6 +63,7 @@ public class CatchThatJunk1Result extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(CatchThatJunk1Result.this, CatchThatJunk2Home.class);
                 startActivity(intent);
+                CatchThatJunk1Result.this.finish();
             }
         });
 
@@ -71,6 +72,7 @@ public class CatchThatJunk1Result extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(CatchThatJunk1Result.this, CatchThatJunkLevel1.class);
                 startActivity(intent);
+                CatchThatJunk1Result.this.finish();
             }
         });
 

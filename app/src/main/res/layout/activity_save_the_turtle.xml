@@ -84,6 +84,21 @@
             android:textColor="@color/white"
             android:textSize="20sp" />
 
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_QuitApp"
+            android:clickable="false"
+            android:layout_width="237dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_gameOver"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="250dp"
+            android:background="@drawable/round_corner"
+            android:backgroundTint="@color/htpbeige"
+            android:fontFamily="@font/pixelgamefont"
+            android:text="QUIT"
+            android:textColor="@color/htpgreen"
+            android:textSize="20sp" />
+
     </RelativeLayout>
 
     <RelativeLayout
@@ -103,8 +118,8 @@
             android:fontFamily="@font/pixelgamefont"
             android:text="You save the turtle!"
             android:textColor="@color/white"
-            android:textStyle="bold"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/txt_sort"
@@ -117,8 +132,8 @@
             android:gravity="center"
             android:text="The rest of the sea creatures are safe. Remember to always throw your trash properly : )"
             android:textColor="@color/white"
-            android:textStyle="bold"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/txt_end"
@@ -131,36 +146,8 @@
             android:gravity="center"
             android:text="We hope you have a great time playing ECO-NICE!                    See you next time! :)"
             android:textColor="@color/white"
-            android:textStyle="bold"
-            android:textSize="20sp" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_startAgain"
-            android:layout_width="237dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/txt_end"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="50dp"
-            android:background="@drawable/round_corner"
-            android:backgroundTint="@color/htpbeige"
-            android:fontFamily="@font/pixelgamefont"
-            android:text="START AGAIN"
-            android:textColor="@color/htpgreen"
-            android:textSize="20sp" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_QuitApp"
-            android:layout_width="237dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/btn_startAgain"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/round_corner"
-            android:backgroundTint="@color/htpbeige"
-            android:fontFamily="@font/pixelgamefont"
-            android:text="QUIT"
-            android:textColor="@color/htpgreen"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 

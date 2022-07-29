@@ -21,6 +21,7 @@ public class HowToPlay extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 onBackPressed();
+                HowToPlay.this.finish();
             }
         });
 

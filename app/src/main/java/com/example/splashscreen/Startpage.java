@@ -52,11 +52,13 @@ public class Startpage extends AppCompatActivity {
     public void open12and() {
         Intent intent = new Intent(this, below12home.class);
         startActivity(intent);
+        Startpage.this.finish();
     }
 
     public void open13() {
         Intent intent = new Intent(this, above13home.class);
         startActivity(intent);
+        Startpage.this.finish();
     }
     @Override
     protected void onResume() {

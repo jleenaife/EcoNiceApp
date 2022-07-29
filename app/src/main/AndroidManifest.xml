@@ -18,9 +18,6 @@
             android:name=".Storyline4"
             android:exported="false" />
         <activity
-            android:name=".End"
-            android:exported="false" />
-        <activity
             android:name=".SaveTheTurtle"
             android:exported="true" />
         <activity

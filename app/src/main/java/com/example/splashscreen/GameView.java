@@ -113,6 +113,7 @@ public class GameView extends View {
                     SaveTheTurtle.txt_best_score.setText("best: " + bestscore);
                     SaveTheTurtle.txt_score.setVisibility(INVISIBLE);
                     SaveTheTurtle.rl_game_over.setVisibility(VISIBLE);
+
                 }
 
                 if (this.turtle.getX() + this.turtle.getWidth() > arrPillars.get(i).getX() + arrPillars.get(i).getWidth() / 2
@@ -128,7 +129,7 @@ public class GameView extends View {
                     }
                     SaveTheTurtle.txt_score.setText("" + score);
 
-                    if(score==15){
+                    if(score==30){
                         SaveTheTurtle.txt_score.setVisibility(INVISIBLE);
                         SaveTheTurtle.rl_game_over.setVisibility(INVISIBLE);
                         SaveTheTurtle.btn_start.setVisibility(INVISIBLE);

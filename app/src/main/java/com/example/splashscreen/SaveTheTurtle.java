@@ -14,13 +14,17 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class SaveTheTurtle extends AppCompatActivity {
     public static TextView txt_score, txt_best_score, txt_score_over;
     public static RelativeLayout rl_game_over;
     public static RelativeLayout rl_complete;
-    public static Button btn_start, startAgain, quitApp;
+    public static Button btn_start, quitApp;
     private GameView gv;
     private MediaPlayer mediaPlayer;
+    Timer timer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,8 +41,9 @@ public class SaveTheTurtle extends AppCompatActivity {
         rl_complete = findViewById(R.id.turtle_End);
         gv = findViewById(R.id.gv);
         btn_start = findViewById(R.id.btn_startTurtle);
-        startAgain = findViewById(R.id.btn_startAgain);
         quitApp = findViewById(R.id.btn_QuitApp);
+
+        timer = new Timer();
 
         btn_start.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,14 +51,6 @@ public class SaveTheTurtle extends AppCompatActivity {
                 txt_score.setVisibility(view.VISIBLE);
                 btn_start.setVisibility(View.INVISIBLE);
                 gv.setStart(true);
-            }
-        });
-        startAgain.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(SaveTheTurtle.this, Nameinput_page.class);
-                startActivity(intent);
-                SaveTheTurtle.this.finish();
             }
         });
         quitApp.setOnClickListener(new View.OnClickListener() {

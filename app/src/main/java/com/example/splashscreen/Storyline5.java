@@ -23,6 +23,7 @@ public class Storyline5 extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Storyline5.this, SaveTheTurtle.class);
                 startActivity(intent);
+                Storyline5.this.finish();
             }
         });
         mediaPlayer = MediaPlayer.create(this, R.raw.story2);

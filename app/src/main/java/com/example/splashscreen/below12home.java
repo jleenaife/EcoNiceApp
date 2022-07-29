@@ -25,6 +25,7 @@ public class below12home extends AppCompatActivity {
 
                 Intent intent = new Intent(below12home.this, QuestionActivity.class);
                 startActivity(intent);
+                below12home.this.finish();
             }
         });
 

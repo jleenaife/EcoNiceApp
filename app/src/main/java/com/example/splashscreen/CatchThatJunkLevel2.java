@@ -185,6 +185,7 @@ public class CatchThatJunkLevel2 extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), CatchThatJunk2Result.class);
                 intent.putExtra("SCORE", score2);
                 startActivity(intent);
+                CatchThatJunkLevel2.this.finish();
             }
         }
 
@@ -206,6 +207,7 @@ public class CatchThatJunkLevel2 extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), CatchThatJunk2Result.class);
                 intent.putExtra("SCORE", score2);
                 startActivity(intent);
+                CatchThatJunkLevel2.this.finish();
             }
         }
 

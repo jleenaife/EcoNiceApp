@@ -26,6 +26,7 @@ public class CatchThatJunk2Home extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(CatchThatJunk2Home.this, CatchThatJunkLevel2.class);
                 startActivity(intent);
+                CatchThatJunk2Home.this.finish();
             }
         });
 

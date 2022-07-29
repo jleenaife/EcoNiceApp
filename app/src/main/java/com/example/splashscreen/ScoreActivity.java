@@ -40,6 +40,7 @@ public class ScoreActivity extends AppCompatActivity {
     public void openSecondGame(){
         Intent intent = new Intent(this, CatchThatJunk1Home.class);
         startActivity(intent);
+        ScoreActivity.this.finish();
     }
 
     @Override

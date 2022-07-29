@@ -223,6 +223,7 @@ public class CatchThatJunkLevel1 extends AppCompatActivity {
             Intent intent = new Intent(getApplicationContext(), CatchThatJunk1Result.class);
             intent.putExtra("SCORE",score);
             startActivity(intent);
+            CatchThatJunkLevel1.this.finish();
         }
 
         // Can
@@ -244,7 +245,7 @@ public class CatchThatJunkLevel1 extends AppCompatActivity {
             Intent intent = new Intent(getApplicationContext(), CatchThatJunk1Result.class);
             intent.putExtra("SCORE",score);
             startActivity(intent);
-
+            CatchThatJunkLevel1.this.finish();
         }
 
     }

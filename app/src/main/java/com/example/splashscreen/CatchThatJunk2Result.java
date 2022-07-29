@@ -63,6 +63,7 @@ public class CatchThatJunk2Result extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(CatchThatJunk2Result.this, Storyline1.class);
                 startActivity(intent);
+                CatchThatJunk2Result.this.finish();
             }
         });
 
@@ -71,6 +72,7 @@ public class CatchThatJunk2Result extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(CatchThatJunk2Result.this, CatchThatJunkLevel2.class);
                 startActivity(intent);
+                CatchThatJunk2Result.this.finish();
             }
         });
         mediaPlayer = MediaPlayer.create(this, R.raw.main);
