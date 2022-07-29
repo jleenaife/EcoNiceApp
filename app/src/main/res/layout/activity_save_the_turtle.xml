@@ -150,20 +150,6 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_startAgain"
-            android:layout_width="237dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/txt_end"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="50dp"
-            android:background="@drawable/round_corner"
-            android:backgroundTint="@color/htpbeige"
-            android:fontFamily="@font/pixelgamefont"
-            android:text="START AGAIN"
-            android:textColor="@color/htpdarkblue"
-            android:textSize="20sp" />
-
     </RelativeLayout>
 
 </RelativeLayout>
