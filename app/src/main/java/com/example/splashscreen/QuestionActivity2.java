@@ -4,6 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.animation.Animator;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
@@ -111,6 +113,7 @@ public class QuestionActivity2 extends AppCompatActivity implements View.OnClick
 
     public void setQuestion()
     {
+        timer.setText(String.valueOf(10));
 
         question.setText(questionList.get(0).getQuestion());
         optiona13.setText(questionList.get(0).getOptionA());
@@ -125,13 +128,11 @@ public class QuestionActivity2 extends AppCompatActivity implements View.OnClick
 
     private void startTimer()
     {
-        countDown = new CountDownTimer(10000, 1000) {
+        countDown = new CountDownTimer(12000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
-                timer.setText(String.valueOf(counter));
-                counter++;
-                if(millisUntilFinished <10)
-                    timer.setText(String.valueOf(millisUntilFinished/1000));
+                if(millisUntilFinished < 1000)
+                    timer.setText(String.valueOf(millisUntilFinished / 1000));
             }
 
             @Override
@@ -215,7 +216,7 @@ public class QuestionActivity2 extends AppCompatActivity implements View.OnClick
 
             qCount.setText(String.valueOf(quesNum+1) + "/" + String.valueOf(questionList.size()));
 
-            timer.setText(String.valueOf(0));
+            timer.setText(String.valueOf(10));
             startTimer();
         }
         else
@@ -278,6 +279,27 @@ public class QuestionActivity2 extends AppCompatActivity implements View.OnClick
 
     @Override
     public void onBackPressed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Are you sure you want to exit?")
+                .setCancelable(false)
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Intent intent = new Intent(QuestionActivity2.this, Startpage.class);
+                        startActivity(intent);
+                        QuestionActivity2.this.finish();
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+
+        AlertDialog alert = builder.create();
+        alert.show();
+
     }
 
     @Override
