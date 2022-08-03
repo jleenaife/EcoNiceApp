@@ -131,7 +131,7 @@ public class QuestionActivity2 extends AppCompatActivity implements View.OnClick
         countDown = new CountDownTimer(12000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
-                if(millisUntilFinished < 1000)
+                if(millisUntilFinished < 10000)
                     timer.setText(String.valueOf(millisUntilFinished / 1000));
             }
 
