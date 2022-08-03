@@ -72,6 +72,12 @@ public class CatchThatJunkLevel2 extends AppCompatActivity {
         paper = findViewById(R.id.paper);
         paint = findViewById(R.id.paint);
 
+        poop.setVisibility(View.INVISIBLE);
+        bottle.setVisibility(View.INVISIBLE);
+        bag.setVisibility(View.INVISIBLE);
+        paper.setVisibility(View.INVISIBLE);
+        paint.setVisibility(View.INVISIBLE);
+
         // Screen Size
         WindowManager windowManager = getWindowManager();
         Display display = windowManager.getDefaultDisplay();
@@ -251,6 +257,12 @@ public class CatchThatJunkLevel2 extends AppCompatActivity {
 
         if (!start_flg) {
             start_flg = true;
+
+            poop.setVisibility(View.VISIBLE);
+            bottle.setVisibility(View.VISIBLE);
+            bag.setVisibility(View.VISIBLE);
+            paper.setVisibility(View.VISIBLE);
+            paint.setVisibility(View.VISIBLE);
 
             // FrameHeight
             FrameLayout frameLayout = findViewById(R.id.frame);

@@ -73,6 +73,12 @@ public class CatchThatJunkLevel1 extends AppCompatActivity {
         carrot = findViewById(R.id.carrot);
         leaves1 = findViewById(R.id.leaves1);
 
+        banana.setVisibility(View.INVISIBLE);
+        battery.setVisibility(View.INVISIBLE);
+        can.setVisibility(View.INVISIBLE);
+        carrot.setVisibility(View.INVISIBLE);
+        leaves1.setVisibility(View.INVISIBLE);
+
         // Screen Size
         WindowManager windowManager = getWindowManager();
         Display display = windowManager.getDefaultDisplay();
@@ -255,6 +261,12 @@ public class CatchThatJunkLevel1 extends AppCompatActivity {
 
         if (!start_flg) {
             start_flg = true;
+
+            banana.setVisibility(View.VISIBLE);
+            battery.setVisibility(View.VISIBLE);
+            can.setVisibility(View.VISIBLE);
+            carrot.setVisibility(View.VISIBLE);
+            leaves1.setVisibility(View.VISIBLE);
 
             // FrameHeight
             FrameLayout frameLayout = findViewById(R.id.frame);
