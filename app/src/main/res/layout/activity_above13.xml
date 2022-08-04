@@ -9,11 +9,8 @@
 
     <TextView
         android:id="@+id/quizTitle2"
-        android:layout_width="355dp"
-        android:layout_height="176dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="32dp"
+        android:layout_width="315dp"
+        android:layout_height="134dp"
         android:height="20dp"
         android:fontFamily="@font/pixelgamefont"
         android:gravity="center"
@@ -21,11 +18,11 @@
         android:textColor="@color/ecodarkblue"
         android:textSize="60sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.234">
+        app:layout_constraintVertical_bias="0.233">
     </TextView>
 
     <ImageView
@@ -33,7 +30,6 @@
         android:layout_width="294dp"
         android:layout_height="310dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toTopOf="@+id/b13startBtn"
@@ -46,18 +42,35 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/b13startBtn"
         android:layout_width="200dp"
-        android:layout_height="50sp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="530dp"
         android:background="@drawable/round_corner"
-        android:backgroundTint="@color/ecobluegreen"
+        android:backgroundTint="@color/ecodarkblue"
         android:fontFamily="@font/pixelgamefont"
         android:text="START"
-        android:textColor="@color/ecodarkblue"
-        android:textSize="30sp"
+        android:textColor="@color/ecobluegreen"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_corner"
+        android:backgroundTint="@color/ecodarkblue"
+        android:fontFamily="@font/pixelgamefont"
+        android:text="BACK"
+        android:textColor="@color/ecobluegreen"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/b13startBtn"
+        app:layout_constraintVertical_bias="0.082" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
