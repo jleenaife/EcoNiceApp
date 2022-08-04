@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class Storyline5 extends AppCompatActivity {
-    private Button st5;
+    private Button st5, btnBack;
     private MediaPlayer mediaPlayer;
 
     @Override
@@ -28,6 +28,18 @@ public class Storyline5 extends AppCompatActivity {
                 Storyline5.this.finish();
             }
         });
+
+        btnBack = findViewById(R.id.btnBack);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+                Intent intent = new Intent(Storyline5.this, Storyline4.class);
+                startActivity(intent);
+                Storyline5.this.finish();
+            }
+        });
+
         mediaPlayer = MediaPlayer.create(this, R.raw.story2);
         mediaPlayer.setLooping(true);
         mediaPlayer.start();

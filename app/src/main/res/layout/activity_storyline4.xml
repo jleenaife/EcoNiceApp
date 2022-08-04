@@ -20,7 +20,7 @@
       android:id="@+id/st4_btn"
       android:layout_width="300dp"
       android:layout_height="wrap_content"
-      android:layout_marginTop="700dp"
+      android:layout_marginTop="600dp"
       android:background="@drawable/round_corner"
       android:backgroundTint="@color/sllightviolet"
       android:fontFamily="@font/pixelgamefont"
@@ -32,5 +32,24 @@
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent" />
+
+  <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/btnBack"
+      android:layout_width="117dp"
+      android:layout_height="51dp"
+      android:background="@drawable/round_corner_smaller_radius"
+      android:backgroundTint="@color/sllightviolet"
+      android:drawableLeft="@drawable/arrow_back_24"
+      android:drawablePadding="-10dp"
+      android:fontFamily="@font/pixelgamefont"
+      android:text="Back"
+      android:textColor="@color/slbeige"
+      android:textSize="20dp"
+      app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.051"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.043" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

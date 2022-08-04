@@ -9,20 +9,21 @@
 
     <ImageView
         android:id="@+id/imageView10"
-        android:layout_width="500dp"
-        android:layout_height="700dp"
+        android:layout_width="418dp"
+        android:layout_height="637dp"
         android:layout_marginBottom="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.516"
         app:srcCompat="@drawable/story5" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/st5_btn"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="700dp"
         android:background="@drawable/round_corner"
         android:backgroundTint="@color/sllightviolet"
         android:fontFamily="@font/pixelgamefont"
@@ -32,7 +33,28 @@
         android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView10" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView10"
+        app:layout_constraintVertical_bias="0.239" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnBack"
+        android:layout_width="117dp"
+        android:layout_height="51dp"
+        android:background="@drawable/round_corner_smaller_radius"
+        android:backgroundTint="@color/sllightviolet"
+        android:drawableLeft="@drawable/arrow_back_24"
+        android:drawablePadding="-10dp"
+        android:fontFamily="@font/pixelgamefont"
+        android:text="Back"
+        android:textColor="@color/slbeige"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.559" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
