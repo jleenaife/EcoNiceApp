@@ -78,13 +78,13 @@ public class GameView extends View {
         arrPillars = new ArrayList<>();
         for (int i =0; i < sumpillar; i++){
             if(i<sumpillar/2){
-                this.arrPillars.add(new Pillar (Constants.SCREEN_WIDTH+i*((Constants.SCREEN_WIDTH+200*Constants.SCREEN_WIDTH/1000)/(sumpillar/2)),
-                        0, 300*Constants.SCREEN_WIDTH/1000, Constants.SCREEN_HEIGHT/2));
+                this.arrPillars.add(new Pillar (Constants.SCREEN_WIDTH+i*((Constants.SCREEN_WIDTH+300*Constants.SCREEN_WIDTH/1080)/(sumpillar/2)),
+                        0, 300*Constants.SCREEN_WIDTH/1080, Constants.SCREEN_HEIGHT/2));
                 this.arrPillars.get(this.arrPillars.size()-1).setBm(BitmapFactory.decodeResource(this.getResources(), R.drawable.pillar1));
                 this.arrPillars.get(this.arrPillars.size()-1).randomY();
             }else {
                 this.arrPillars.add(new Pillar(this.arrPillars.get(i-sumpillar/2).getX(), this.arrPillars.get(i-sumpillar/2).getY()
-                        +this.arrPillars.get(i-sumpillar/2).getHeight() + this.distance, 300*Constants.SCREEN_WIDTH/1000, Constants.SCREEN_HEIGHT/2));
+                        +this.arrPillars.get(i-sumpillar/2).getHeight() + this.distance, 300*Constants.SCREEN_WIDTH/1080, Constants.SCREEN_HEIGHT/2));
                 this.arrPillars.get(this.arrPillars.size()-1).setBm(BitmapFactory.decodeResource(this.getResources(), R.drawable.pillar2));
             }
         }

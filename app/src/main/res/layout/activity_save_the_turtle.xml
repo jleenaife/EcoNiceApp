@@ -92,7 +92,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/txt_gameOver"
             android:layout_centerInParent="true"
-            android:layout_marginTop="250dp"
+            android:layout_marginTop="100dp"
             android:background="@drawable/round_corner"
             android:backgroundTint="@color/htpbeige"
             android:fontFamily="@font/pixelgamefont"

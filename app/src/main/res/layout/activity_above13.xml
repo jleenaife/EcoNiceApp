@@ -22,7 +22,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.233">
+        app:layout_constraintVertical_bias="0.191">
     </TextView>
 
     <ImageView
@@ -37,6 +37,7 @@
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quizTitle2"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/eq_logo" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -52,8 +53,10 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.354" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button2"
@@ -70,7 +73,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/b13startBtn"
-        app:layout_constraintVertical_bias="0.082" />
+        app:layout_constraintVertical_bias="0.211" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
