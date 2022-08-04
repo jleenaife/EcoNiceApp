@@ -11,15 +11,26 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="ABOUT"
+        android:fontFamily="@font/pixelgamefont"
+        android:textColor="@color/abtpink"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:text="ECO-NICE!"
         android:fontFamily="@font/pixelgamefont"
         android:textColor="@color/white"
-        android:textSize="40sp"
+        android:textSize="30sp"
         android:textStyle="bold" />
+
     <ImageView
-        android:layout_width="141dp"
-        android:layout_height="142dp"
-        android:src="@drawable/laevag_logo"
+        android:layout_width="116dp"
+        android:layout_height="120dp"
+        android:src="@drawable/econice_logo"
         tools:ignore="ContentDescription" />
 
     <TextView
@@ -28,8 +39,7 @@
         android:fontFamily="@font/pixelgamefont"
         android:gravity="center"
         android:paddingTop="20dp"
-        android:text="This app was made by the following members of Group Lævag of
-        BSCOE 2-4"
+        android:text="DEVELOPERS"
         android:textColor="@color/white"
         android:textSize="25sp"
         android:textStyle="bold" />
@@ -37,7 +47,7 @@
     <TableLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:background="@color/abtrosepink">
 
         <TableRow
@@ -126,11 +136,23 @@
 
     </TableLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="Polytechnic University of the Philippines,
+        Sta. Mesa 2022"
+        android:fontFamily="@font/pixelgamefont"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnAbtBack"
         android:layout_width="228dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="@color/abtpink"
         android:text="BACK"
         android:fontFamily="@font/pixelgamefont"
