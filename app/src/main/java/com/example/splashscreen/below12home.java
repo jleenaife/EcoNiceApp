@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class below12home extends AppCompatActivity {
-    private Button start;
+    private Button start, btnBack;
     private MediaPlayer mediaPlayer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +25,17 @@ public class below12home extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent(below12home.this, QuestionActivity.class);
+                startActivity(intent);
+                below12home.this.finish();
+            }
+        });
+
+        btnBack = findViewById(R.id.btnBack);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+                Intent intent = new Intent(below12home.this, Startpage.class);
                 startActivity(intent);
                 below12home.this.finish();
             }
