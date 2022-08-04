@@ -1,15 +1,12 @@
 package com.example.splashscreen;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.ImageView;
 
-public class SplashScreen extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class AppSplashScreen extends AppCompatActivity {
 
         Handler h = new Handler();
 
@@ -17,17 +14,15 @@ public class SplashScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
+        setContentView(R.layout.activity_app_splash_screen);
 
         h.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i = new Intent(SplashScreen.this, AppSplashScreen.class);
+                Intent i = new Intent(AppSplashScreen.this, Nameinput_page.class);
                 startActivity(i);
-                overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
                 finish();
             }
-        },3000);
+        },4000);
     }
 }

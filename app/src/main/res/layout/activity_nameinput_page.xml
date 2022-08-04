@@ -16,7 +16,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bg" />
+        app:srcCompat="@drawable/name_input" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/Homepage_Btn"
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:background="@drawable/round_corner"
+        android:background="@drawable/round_corner_smaller_radius"
         android:backgroundTint="#19456B"
         android:fontFamily="@font/pixelgamefont"
         android:text="SUBMIT"
@@ -44,6 +44,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="60dp"
         android:backgroundTint="#19456B"
+        android:fontFamily="@font/pixelgamefont"
+        android:textSize="20dp"
         android:ems="10"
         android:gravity="center"
         android:inputType="textPersonName"
